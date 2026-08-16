@@ -368,11 +368,25 @@ section{ padding:88px 0; }
 
 /* ---------- Vraie page d'accueil (mirroir datcafe.fr) ---------- */
 .home-hero-image{
-  width:100%; display:block; overflow:hidden; background:var(--navy-900); line-height:0;
+  position:relative; width:100%; aspect-ratio:1759/608; overflow:hidden; background:var(--navy-900);
 }
-.home-hero-image img{
-  width:100%; height:auto; display:block;
+@media (max-width:640px){
+  .home-hero-image{ aspect-ratio:4/5; }
 }
+.hero-slide{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  opacity:0; transition:opacity 1.1s ease;
+}
+.hero-slide.active{ opacity:1; }
+.hero-dots{
+  position:absolute; bottom:16px; left:50%; transform:translateX(-50%);
+  display:flex; gap:9px; z-index:5;
+}
+.hero-dot{
+  width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.5);
+  border:2px solid rgba(255,255,255,.7); cursor:pointer; padding:0; transition:background .2s ease;
+}
+.hero-dot.active{ background:#fff; }
 .home-hero-text{
   background:var(--navy-900); color:#fff; padding:48px 0 44px;
 }
@@ -502,8 +516,13 @@ section{ padding:88px 0; }
 
 <main>
 
-  <div class="home-hero-image">
-    <img src="images/page-garde-hero.jpg" alt="D.A.T. — La Boutique Officiel D.A.T.">
+  <div class="home-hero-image" id="hero-slider">
+    <img src="images/page-garde-hero.jpg" alt="D.A.T. — La Boutique Officiel D.A.T." class="hero-slide active">
+    <img src="images/page-garde-hero-2.jpg" alt="D.A.T. — La Boutique Officielle de D.A.T." class="hero-slide">
+    <div class="hero-dots">
+      <button type="button" class="hero-dot active" data-index="0" aria-label="Image 1"></button>
+      <button type="button" class="hero-dot" data-index="1" aria-label="Image 2"></button>
+    </div>
   </div>
 
   <section class="home-hero-text">
@@ -613,6 +632,42 @@ section{ padding:88px 0; }
 <script src="auth.js"></script>
 <script>
 (function(){
+  /* ==========================================================================
+     Diaporama hero (fondu enchaîné entre les visuels de page de garde)
+     ========================================================================== */
+  var heroSlider = document.getElementById('hero-slider');
+  if(heroSlider){
+    var slides = heroSlider.querySelectorAll('.hero-slide');
+    var dots = heroSlider.querySelectorAll('.hero-dot');
+    var current = 0;
+    var heroTimer = null;
+
+    function showSlide(index){
+      current = index;
+      slides.forEach(function(s, i){ s.classList.toggle('active', i === index); });
+      dots.forEach(function(d, i){ d.classList.toggle('active', i === index); });
+    }
+
+    function nextSlide(){
+      showSlide((current + 1) % slides.length);
+    }
+
+    function startAutoplay(){
+      heroTimer = setInterval(nextSlide, 5500);
+    }
+
+    if(slides.length > 1){
+      dots.forEach(function(dot){
+        dot.addEventListener('click', function(){
+          clearInterval(heroTimer);
+          showSlide(parseInt(dot.getAttribute('data-index'), 10));
+          startAutoplay();
+        });
+      });
+      startAutoplay();
+    }
+  }
+
   /* ==========================================================================
      Nav mobile + recherche (identique aux autres pages du site)
      ========================================================================== */
