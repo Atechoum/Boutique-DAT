@@ -754,7 +754,6 @@ section{ padding:88px 0; }
       <ul class="footer-links">
         <li>Toulouse</li>
         <li><a href="tel:+33534480059">05 34 48 00 59</a></li>
-        <li><a href="https://datcafe.fr/contact.html" target="_blank" rel="noopener">Demander un devis</a></li>
         <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
@@ -854,7 +853,7 @@ section{ padding:88px 0; }
     if(!q){ results.innerHTML=''; return; }
     var found = runSearch(q);
     if(found.length === 0){
-      results.innerHTML = '<p class="search-empty">Aucun r\u00e9sultat pour \u00ab\u00a0' + escapeHtml(q) + '\u00a0\u00bb. <a href="https://datcafe.fr/contact.html" target="_blank" rel="noopener">Contactez-nous</a> pour toute question.</p>';
+      results.innerHTML = '<p class="search-empty">Aucun r\u00e9sultat pour \u00ab\u00a0' + escapeHtml(q) + '\u00a0\u00bb.</p>';
     } else {
       results.innerHTML = found.map(function(r){
         return '<a class="search-result" href="' + r.url + '"><span class="sr-title">' + r.title + '</span><span class="sr-snippet">' + r.snippet + '</span></a>';
