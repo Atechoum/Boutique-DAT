@@ -48,6 +48,7 @@ window.DAT_CATALOGUE = {
     },
     {
       id:'decafeine',
+      image:'images/capsule-decafeine.jpg',
       kicker:'Sans caféine · Torréfaction douce',
       name:'Décaféiné',
       desc:'Tout l\u2019arôme de l\u2019espresso italien, sans caféine. Idéal pour les pauses en fin de journée.',
@@ -59,30 +60,34 @@ window.DAT_CATALOGUE = {
   boissons: [
     {
       id:'cappuccino',
-      kicker:'Café & lait en poudre',
-      name:'Cappuccino',
-      desc:'Un café onctueux à la mousse de lait généreuse, prêt en une capsule pour une pause gourmande.',
+      image:'images/boisson-cappuccino.jpg',
+      kicker:'Lavazza Expert · Instant',
+      name:'Cappuccino Classique',
+      desc:'Un cappuccino instantané onctueux à la mousse de lait généreuse, en dosettes individuelles prêtes à l\u2019emploi.',
       formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     },
     {
       id:'chocolat-chaud',
-      kicker:'Boisson chocolatée',
+      image:'images/boisson-chocolat-chaud.jpg',
+      kicker:'Lavazza Dipiù · Boisson chocolatée',
       name:'Chocolat Chaud',
       desc:'Une boisson chocolatée onctueuse et réconfortante, pour varier les plaisirs à la machine.',
       formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     },
     {
-      id:'latte-macchiato',
-      kicker:'Café & lait',
-      name:'Latte Macchiato',
-      desc:'Un café tout en douceur, avec une belle couche de mousse de lait, pour une pause gourmande en milieu de journée.',
+      id:'bevanda-bianca',
+      image:'images/boisson-bevanda-bianca.jpg',
+      kicker:'Lavazza FIRMA · Boisson lactée',
+      name:'Bevanda Bianca',
+      desc:'Une boisson lactée douce et crémeuse, pour varier les plaisirs à la machine entre deux cafés.',
       formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     },
     {
-      id:'the-earl-grey',
-      kicker:'Infusion',
-      name:'Thé Earl Grey',
-      desc:'Une infusion parfumée à la bergamote, pour varier les plaisirs entre deux cafés.',
+      id:'the-citron',
+      image:'images/boisson-the-citron.jpg',
+      kicker:'Whittington FIRMA · Infusion',
+      name:'Thé Citron de Sicile',
+      desc:'Une infusion de thé au jus de citrons de Sicile, fraîche et parfumée, pour varier les plaisirs entre deux cafés.',
       formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     }
   ],
