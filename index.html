@@ -367,15 +367,17 @@ section{ padding:88px 0; }
 .page-hero-note::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none; }
 
 /* ---------- Vraie page d'accueil (mirroir datcafe.fr) ---------- */
-.home-hero{
-  position:relative; min-height:520px; display:flex; align-items:flex-end;
-  background:var(--navy-900);
+.home-hero-image{
+  width:100%; display:block; overflow:hidden; background:var(--navy-900); line-height:0;
 }
-.home-hero img{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.55;
+.home-hero-image img{
+  width:100%; height:auto; display:block;
 }
-.home-hero .wrap{ position:relative; padding-bottom:64px; padding-top:220px; }
-.home-hero h1{ color:#fff; font-size:clamp(32px,4.2vw,50px); max-width:18ch; }
+.home-hero-text{
+  background:var(--navy-900); color:#fff; padding:48px 0 44px;
+}
+.home-hero-text .wrap{ position:relative; }
+.home-hero-text h1{ color:#fff; font-size:clamp(30px,3.8vw,44px); max-width:22ch; }
 
 .machines-grid{
   display:grid; grid-template-columns:repeat(5,1fr); gap:1px;
@@ -499,8 +501,11 @@ section{ padding:88px 0; }
 
 <main>
 
-  <section class="home-hero">
+  <div class="home-hero-image">
     <img src="images/page-garde-hero.jpg" alt="D.A.T. — Le partenaire de vos pauses café et snack, sans contrainte.">
+  </div>
+
+  <section class="home-hero-text">
     <div class="wrap">
       <p class="breadcrumb">Accueil</p>
       <h1>La boutique D.A.T.</h1>
