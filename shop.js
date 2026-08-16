@@ -48,6 +48,14 @@ window.DAT_SHOP = (function(){
     return cart.reduce(function(sum, c){ return sum + c.qty; }, 0);
   }
 
+  function changeQty(key, delta){
+    var item = cart.find(function(c){ return cartKey(c) === key; });
+    if(!item) return;
+    item.qty = Math.max(1, Math.min(99, item.qty + delta));
+    saveCart();
+    renderCart();
+  }
+
   function renderCart(){
     if(!els) return;
     var count = cartCount();
@@ -57,34 +65,57 @@ window.DAT_SHOP = (function(){
     });
 
     if(cart.length === 0){
-      els.items.innerHTML = '<p class="cart-empty">Votre panier est vide. Ajoutez des produits ci-dessous.</p>';
+      if(els.items) els.items.innerHTML = '<p class="cart-empty">Votre panier est vide. Ajoutez des produits ci-dessous.</p>';
       if(els.checkoutBtn) els.checkoutBtn.style.display = 'none';
-      if(els.recapList) els.recapList.innerHTML = '<p class="order-recap-empty">Votre panier est vide pour le moment.</p>';
+      if(els.recapList) els.recapList.innerHTML = '<p class="order-recap-empty">Votre panier est vide pour le moment. <a href="index.html">Découvrir la boutique</a>.</p>';
       if(els.recapField) els.recapField.value = '';
       return;
     }
 
-    els.items.innerHTML = cart.map(function(c){
-      return '<div class="cart-item">' +
-        '<div>' +
-          '<span class="cart-item-name">' + c.name + '</span>' +
-          '<span class="cart-item-meta">' + c.formatLabel + ' · quantité ' + c.qty + '</span>' +
-          '<button type="button" class="cart-item-remove" data-key="' + cartKey(c) + '">Retirer</button>' +
-        '</div>' +
-      '</div>';
-    }).join('');
+    if(els.items){
+      els.items.innerHTML = cart.map(function(c){
+        return '<div class="cart-item">' +
+          '<div>' +
+            '<span class="cart-item-name">' + c.name + '</span>' +
+            '<span class="cart-item-meta">' + c.formatLabel + ' · quantité ' + c.qty + '</span>' +
+            '<button type="button" class="cart-item-remove" data-key="' + cartKey(c) + '">Retirer</button>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+      els.items.querySelectorAll('.cart-item-remove').forEach(function(btn){
+        btn.addEventListener('click', function(){ removeFromCart(btn.getAttribute('data-key')); });
+      });
+    }
 
     if(els.checkoutBtn) els.checkoutBtn.style.display = 'inline-flex';
 
     if(els.recapList){
       els.recapList.innerHTML = cart.map(function(c){
+        var key = cartKey(c);
         return '<div class="order-recap-item">' +
           '<div>' +
             '<span class="order-recap-item-name">' + c.name + '</span>' +
-            '<span class="order-recap-item-meta">' + c.formatLabel + ' · quantité ' + c.qty + '</span>' +
+            '<span class="order-recap-item-meta">' + c.formatLabel + '</span>' +
+          '</div>' +
+          '<div class="order-recap-item-controls">' +
+            '<div class="qty-stepper">' +
+              '<button type="button" class="recap-dec" data-key="' + key + '" aria-label="Diminuer la quantité">−</button>' +
+              '<span class="recap-qty-value">' + c.qty + '</span>' +
+              '<button type="button" class="recap-inc" data-key="' + key + '" aria-label="Augmenter la quantité">+</button>' +
+            '</div>' +
+            '<button type="button" class="cart-item-remove recap-remove" data-key="' + key + '">Retirer</button>' +
           '</div>' +
         '</div>';
       }).join('');
+      els.recapList.querySelectorAll('.recap-dec').forEach(function(btn){
+        btn.addEventListener('click', function(){ changeQty(btn.getAttribute('data-key'), -1); });
+      });
+      els.recapList.querySelectorAll('.recap-inc').forEach(function(btn){
+        btn.addEventListener('click', function(){ changeQty(btn.getAttribute('data-key'), 1); });
+      });
+      els.recapList.querySelectorAll('.recap-remove').forEach(function(btn){
+        btn.addEventListener('click', function(){ removeFromCart(btn.getAttribute('data-key')); });
+      });
     }
 
     if(els.recapField){
@@ -92,10 +123,6 @@ window.DAT_SHOP = (function(){
         return '- ' + c.name + ' — ' + c.formatLabel + ' × ' + c.qty;
       }).join('\n');
     }
-
-    els.items.querySelectorAll('.cart-item-remove').forEach(function(btn){
-      btn.addEventListener('click', function(){ removeFromCart(btn.getAttribute('data-key')); });
-    });
   }
 
   /* ---------- Rendu d'une grille de fiches produits ---------- */

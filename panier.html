@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D.A.T. — Accessoires Lavazza FIRMA | Distribution Automatique Toulousaine</title>
-<meta name="description" content="Commandez vos accessoires pour machine Lavazza FIRMA : kit de détartrage, filtre à eau, tasses espresso, support à capsules. Livraison directe à votre bureau.">
-<link rel="canonical" href="https://datcafe.fr/accessoires.html">
+<title>D.A.T. — Mon panier | Distribution Automatique Toulousaine</title>
+<meta name="description" content="Consultez et finalisez votre commande de capsules Lavazza FIRMA, boissons gourmandes et accessoires.">
+<link rel="canonical" href="https://datcafe.fr/panier.html">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<meta name="robots" content="noindex">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="D.A.T. — Accessoires Lavazza FIRMA | Distribution Automatique Toulousaine">
-<meta property="og:description" content="Commandez vos accessoires pour machine Lavazza FIRMA : kit de détartrage, filtre à eau, tasses espresso, support à capsules. Livraison directe à votre bureau.">
-<meta property="og:url" content="https://datcafe.fr/accessoires.html">
+<meta property="og:title" content="D.A.T. — Mon panier | Distribution Automatique Toulousaine">
+<meta property="og:description" content="Consultez et finalisez votre commande de capsules Lavazza FIRMA, boissons gourmandes et accessoires.">
+<meta property="og:url" content="https://datcafe.fr/panier.html">
 <meta property="og:image" content="https://datcafe.fr/images/og-image.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="D.A.T. — Distribution Automatique Toulousaine">
@@ -456,6 +457,16 @@ section{ padding:88px 0; }
 .order-recap-item:first-child{ border-top:none; }
 .order-recap-item-name{ font-family:'Poppins',sans-serif; font-weight:700; font-size:14px; color:var(--navy-900); display:block; }
 .order-recap-item-meta{ font-size:12.5px; color:var(--muted); display:block; margin-top:2px; }
+.order-recap-item{ align-items:center; }
+.order-recap-item-controls{ display:flex; align-items:center; gap:14px; flex:none; }
+.order-recap-item-controls .qty-stepper{ display:flex; align-items:center; border:1px solid var(--line); border-radius:2px; }
+.order-recap-item-controls .qty-stepper button{
+  width:26px; height:28px; border:none; background:var(--bg-alt); cursor:pointer;
+  font-size:15px; font-weight:700; color:var(--navy-800); font-family:'Poppins',sans-serif;
+}
+.order-recap-item-controls .qty-stepper button:hover{ background:var(--gold); }
+.recap-qty-value{ width:26px; text-align:center; font-family:'Poppins',sans-serif; font-size:13px; }
+.order-recap-item-controls .recap-remove{ font-size:11.5px; white-space:nowrap; }
 .order-recap-empty{ color:var(--muted); font-size:14.5px; text-align:center; padding:30px 0; }
 .form-card{
   background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
@@ -501,31 +512,30 @@ section{ padding:88px 0; }
 
 /* ---------- Bouton panier flottant ---------- */
 .floating-cart{
-  position:fixed; right:28px; bottom:28px; z-index:90;
-  width:78px; height:78px; border-radius:50%;
+  position:fixed; right:24px; bottom:24px; z-index:90;
+  width:58px; height:58px; border-radius:50%;
   background:var(--gold); color:var(--navy-900); border:none; cursor:pointer;
   display:flex; align-items:center; justify-content:center;
-  box-shadow:0 16px 34px -10px rgba(10,38,71,.5);
+  box-shadow:0 14px 30px -10px rgba(10,38,71,.45);
   transition:transform .15s ease, background .15s ease, color .15s ease;
-  text-decoration:none;
 }
-.floating-cart:hover{ background:var(--gold-dark); color:#fff; transform:translateY(-3px); }
-.floating-cart svg{ width:32px; height:32px; }
+.floating-cart:hover{ background:var(--gold-dark); color:#fff; transform:translateY(-2px); }
+.floating-cart svg{ width:24px; height:24px; }
 .floating-cart-badge{
-  position:absolute; top:-6px; right:-6px;
+  position:absolute; top:-4px; right:-4px;
   background:var(--gold-dark); color:#fff; font-family:'Poppins',sans-serif;
-  font-weight:700; font-size:13px; width:26px; height:26px; border-radius:50%;
+  font-weight:700; font-size:11px; width:20px; height:20px; border-radius:50%;
   display:flex; align-items:center; justify-content:center; line-height:1;
   border:2px solid #fff;
 }
 .floating-cart-badge.zero{ display:none; }
 @media (max-width:640px){
-  .floating-cart{ right:18px; bottom:18px; width:66px; height:66px; }
-  .floating-cart svg{ width:28px; height:28px; }
+  .floating-cart{ right:16px; bottom:16px; width:52px; height:52px; }
 }
 </style>
 </head>
 <body>
+<a id="top"></a>
 
 <header>
   <div class="topbar">
@@ -549,7 +559,7 @@ section{ padding:88px 0; }
             <nav aria-label="Navigation principale" id="site-nav">
             <a href="capsules-cafe.html">Capsules Café</a>
             <a href="boissons-gourmandes.html">Boissons Gourmandes</a>
-            <a href="accessoires.html" aria-current="page">Accessoire</a>
+            <a href="accessoires.html">Accessoire</a>
             </nav>
       <div class="nav-tools">
         <div class="search-wrap">
@@ -575,7 +585,7 @@ section{ padding:88px 0; }
             <h4>Votre panier</h4>
             <div id="cart-items"><p class="cart-empty">Votre panier est vide. Ajoutez des boîtes de capsules ci-dessous.</p></div>
             <div id="cart-total-wrap"></div>
-            <a href="panier.html" class="btn btn-gold" id="cart-checkout-btn" style="display:none;">Voir le panier</a>
+            <a href="#top" class="btn btn-gold" id="cart-checkout-btn" style="display:none;">Voir le récapitulatif</a>
           </div>
         </div>
         <div class="account-wrap">
@@ -593,69 +603,71 @@ section{ padding:88px 0; }
 
   <section class="page-hero">
     <div class="wrap">
-      <p class="breadcrumb">Accessoire</p>
-      <h1>Accessoires Lavazza FIRMA</h1>
-      <p>Tout pour entretenir et accompagner votre machine Lavazza FIRMA : kits de détartrage, filtres à eau, tasses et accessoires de service. Composez votre commande et envoyez votre demande directement à notre équipe.</p>
+      <p class="breadcrumb">Panier</p>
+      <h1>Mon panier</h1>
+      <p>Vérifiez le contenu de votre panier, ajustez les quantités si besoin, puis transmettez votre demande de commande. Réponse et confirmation sous 48h ouvrées.</p>
       <span class="page-hero-note">Livraison directe à votre bureau · Pas de paiement en ligne, commande confirmée par nos équipes</span>
     </div>
   </section>
 
-  <section class="no-top-pad">
+  <section class="no-top-pad" style="padding-bottom:88px;">
     <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="tag">Entretien & accessoires</span>
-          <h2>Choisissez vos accessoires</h2>
+      <div class="order-grid">
+        <div class="order-recap-card">
+          <h3>Récapitulatif</h3>
+          <div id="order-recap-list">
+            <p class="order-recap-empty">Votre panier est vide pour le moment. <a href="index.html">Découvrir la boutique</a>.</p>
+          </div>
         </div>
-        <p>Accessoires compatibles avec votre machine Lavazza FIRMA. Ajoutez vos références au panier, puis finalisez votre demande de commande en bas de page.</p>
+
+        <div class="form-card">
+          <h3 class="form-card-title">Envoyer ma demande de commande</h3>
+          <p class="form-card-sub">Commande transmise directement à D.A.T., sans paiement en ligne. Nous vous recontactons pour confirmer et organiser la livraison.</p>
+
+          <form id="order-form">
+            <input type="hidden" name="access_key" value="38c4d02f-9430-4d96-a827-ebd07b81f8ea">
+            <input type="hidden" name="subject" value="Nouvelle commande — Boutique D.A.T.">
+            <input type="hidden" name="from_name" value="Boutique D.A.T.">
+            <input type="hidden" name="recapitulatif_commande" id="order-recap-field" value="">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-row">
+              <div class="field">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+              </div>
+              <div class="field">
+                <label for="societe">Société</label>
+                <input type="text" id="societe" name="societe" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="field">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone">
+              </div>
+            </div>
+            <div class="field full">
+              <label for="adresse">Adresse de livraison</label>
+              <input type="text" id="adresse" name="adresse" placeholder="N°, rue, code postal, ville" required>
+            </div>
+            <div class="field full">
+              <label for="message">Message ou instructions complémentaires</label>
+              <textarea id="message" name="message" placeholder="Précisions sur la livraison, référence de machine, etc. (facultatif)"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-block" id="order-submit">Envoyer ma commande</button>
+            <p class="form-note" id="order-status">Votre panier sera joint automatiquement à votre demande.</p>
+          </form>
+        </div>
       </div>
-
-      <p class="shop-intro">Sélectionnez vos accessoires, ajustez la quantité, puis ajoutez au panier — vous pouvez combiner plusieurs références dans la même commande.</p>
-
-      <div class="shop-grid" id="shop-grid">
-        <!-- Les fiches produits sont injectées en JS à partir du catalogue PRODUCTS -->
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <span class="tag">Comment ça marche</span>
-          <h2>De votre panier à votre bureau</h2>
-        </div>
-        <p>Un circuit simple, pensé pour les entreprises déjà équipées d'une machine Lavazza FIRMA.</p>
-      </div>
-      <div class="process">
-        <div class="process-step">
-          <span class="num">01</span>
-          <h3>Composez votre commande</h3>
-          <p>Choisissez vos références, formats et quantités dans la boutique, puis ajoutez-les au panier.</p>
-        </div>
-        <div class="process-step">
-          <span class="num">02</span>
-          <h3>Envoyez votre demande</h3>
-          <p>Renseignez vos coordonnées et votre adresse de livraison dans le formulaire de commande.</p>
-        </div>
-        <div class="process-step">
-          <span class="num">03</span>
-          <h3>Confirmation &amp; livraison</h3>
-          <p>Notre équipe confirme votre commande sous 48h ouvrées et organise la livraison à votre bureau.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="cta-band">
-    <div class="wrap">
-      <h2>Pas encore équipé d'une machine Lavazza FIRMA&nbsp;?</h2>
     </div>
   </section>
 
 </main>
+
 
 <footer class="site-footer">
   <div class="wrap footer-grid">
@@ -699,14 +711,20 @@ section{ padding:88px 0; }
 <script src="auth.js"></script>
 <script>
 (function(){
-  /* ---------- Boutique : rendu produits, panier, commande ---------- */
-  window.DAT_SHOP.renderProducts('shop-grid', window.DAT_CATALOGUE.accessoires);
+  /* ---------- Panier & commande ---------- */
   window.DAT_SHOP.mountCart({
     badge: 'cart-badge',
     items: 'cart-items',
     checkoutBtn: 'cart-checkout-btn',
+    recapList: 'order-recap-list',
+    recapField: 'order-recap-field',
     toggle: 'cart-toggle',
     panel: 'cart-panel'
+  });
+  window.DAT_SHOP.mountOrderForm({
+    formId: 'order-form',
+    statusId: 'order-status',
+    submitId: 'order-submit'
   });
 
   /* ==========================================================================
@@ -773,9 +791,5 @@ section{ padding:88px 0; }
   });
 })();
 </script>
-<a href="panier.html" class="floating-cart" aria-label="Voir le panier">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-  <span class="floating-cart-badge zero" data-cart-badge>0</span>
-</a>
 </body>
 </html>
