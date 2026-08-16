@@ -32,8 +32,10 @@ window.DAT_SHOP = (function(){
   function renderCart(){
     if(!els) return;
     var count = cartCount();
-    els.badge.textContent = count;
-    els.badge.classList.toggle('zero', count === 0);
+    document.querySelectorAll('[data-cart-badge]').forEach(function(b){
+      b.textContent = count;
+      b.classList.toggle('zero', count === 0);
+    });
 
     if(cart.length === 0){
       els.items.innerHTML = '<p class="cart-empty">Votre panier est vide. Ajoutez des produits ci-dessous.</p>';
