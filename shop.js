@@ -141,6 +141,7 @@ window.DAT_SHOP = (function(){
         : '';
 
       var formatControlHtml;
+      var formatLabelHtml = '';
       if(formats.length > 1){
         var formatOptions = formats.map(function(f, i){
           return '<option value="' + i + '">' + f.label + '</option>';
@@ -148,14 +149,16 @@ window.DAT_SHOP = (function(){
         formatControlHtml = '<select class="format-select" data-role="format">' + formatOptions + '</select>';
       } else {
         formatControlHtml = '';
+        formatLabelHtml = '<span class="format-static">' + formats[0].label + '</span>';
       }
 
       card.innerHTML =
         mediaHtml +
-        '<div class="shop-card-body' + (p.image ? '' : ' no-media') + '">' +
+        '<div class="shop-card-body' + (p.image ? '' : ' no-media') + '"' + '>' +
           '<span class="kicker">' + p.kicker + '</span>' +
           '<h3>' + p.name + '</h3>' +
           '<p class="desc">' + p.desc + '</p>' +
+          formatLabelHtml +
           '<div class="shop-controls">' +
             '<div class="shop-row">' +
               formatControlHtml +
