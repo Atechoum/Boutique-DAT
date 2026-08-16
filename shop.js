@@ -3,9 +3,26 @@
    Chargé après catalogue.js sur chaque page boutique.
    ============================================================================ */
 window.DAT_SHOP = (function(){
-  var cart = [];
+  var CART_STORAGE_KEY = 'dat_cart_v1';
+  var cart = loadCart();
   var els = null;
   var currentSession = null;
+
+  function loadCart(){
+    try {
+      var raw = localStorage.getItem(CART_STORAGE_KEY);
+      var parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? parsed : [];
+    } catch(err){
+      return [];
+    }
+  }
+
+  function saveCart(){
+    try {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    } catch(err){ /* stockage indisponible (navigation privée, quota…) : le panier reste en mémoire pour cette page */ }
+  }
 
   function cartKey(item){ return item.productId + '::' + item.formatLabel; }
 
@@ -17,11 +34,13 @@ window.DAT_SHOP = (function(){
     } else {
       cart.push(item);
     }
+    saveCart();
     renderCart();
   }
 
   function removeFromCart(key){
     cart = cart.filter(function(c){ return cartKey(c) !== key; });
+    saveCart();
     renderCart();
   }
 
@@ -252,6 +271,7 @@ window.DAT_SHOP = (function(){
           }
           orderForm.reset();
           cart = [];
+          saveCart();
           renderCart();
           orderSubmit.textContent = 'Commande envoyée ✓';
           orderStatus.textContent = currentSession
