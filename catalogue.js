@@ -64,7 +64,7 @@ window.DAT_CATALOGUE = {
       kicker:'Lavazza Expert · Instant',
       name:'Cappuccino Classique',
       desc:'Un cappuccino instantané onctueux à la mousse de lait généreuse, en dosettes individuelles prêtes à l\u2019emploi.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 10 sticks'} ]
     },
     {
       id:'chocolat-chaud',
@@ -72,7 +72,7 @@ window.DAT_CATALOGUE = {
       kicker:'Lavazza Dipiù · Boisson chocolatée',
       name:'Chocolat Chaud',
       desc:'Une boisson chocolatée onctueuse et réconfortante, pour varier les plaisirs à la machine.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 50 sachets'} ]
     },
     {
       id:'bevanda-bianca',
@@ -80,7 +80,7 @@ window.DAT_CATALOGUE = {
       kicker:'Lavazza FIRMA · Boisson lactée',
       name:'Bevanda Bianca',
       desc:'Une boisson lactée douce et crémeuse, pour varier les plaisirs à la machine entre deux cafés.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 24 capsules'} ]
     },
     {
       id:'the-citron',
@@ -88,7 +88,7 @@ window.DAT_CATALOGUE = {
       kicker:'Whittington FIRMA · Infusion',
       name:'Thé Citron de Sicile',
       desc:'Une infusion de thé au jus de citrons de Sicile, fraîche et parfumée, pour varier les plaisirs entre deux cafés.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 24 capsules'} ]
     }
   ],
 
