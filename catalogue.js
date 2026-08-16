@@ -12,7 +12,7 @@ window.DAT_CATALOGUE = {
       kicker:'100% Arabica · Torréfaction douce',
       name:'Milano',
       desc:'Un espresso rond et délicat, inspiré des flèches du Duomo. L\u2019élégance discrète de la capitale lombarde, tasse après tasse.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'napoli',
@@ -20,7 +20,7 @@ window.DAT_CATALOGUE = {
       kicker:'Assemblage traditionnel · Torréfaction intense',
       name:'Napoli',
       desc:'Un espresso corsé à la crema généreuse, dans la pure tradition du café napolitain, pour un réveil plein de caractère.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'roma',
@@ -28,7 +28,7 @@ window.DAT_CATALOGUE = {
       kicker:'Assemblage équilibré · Torréfaction moyenne',
       name:'Roma',
       desc:'Un espresso rond et généreux, à l\u2019image de la ville éternelle. Un classique intemporel pour toutes les pauses.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'torino',
@@ -36,7 +36,7 @@ window.DAT_CATALOGUE = {
       kicker:'100% Arabica · Torréfaction douce',
       name:'Torino',
       desc:'Un espresso élégant et velouté, hommage à la capitale historique du café italien et de ses grands cafés.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'torino-lungo',
@@ -44,7 +44,14 @@ window.DAT_CATALOGUE = {
       kicker:'100% Arabica · Format Lungo',
       name:'Torino Lungo',
       desc:'Une tasse plus longue et tout en douceur, pour une pause café qui prend son temps.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
+    },
+    {
+      id:'decafeine',
+      kicker:'Sans caféine · Torréfaction douce',
+      name:'Décaféiné',
+      desc:'Tout l\u2019arôme de l\u2019espresso italien, sans caféine. Idéal pour les pauses en fin de journée.',
+      formats:[ {label:'Boîte de 48 capsules'} ]
     }
   ],
 
@@ -55,28 +62,28 @@ window.DAT_CATALOGUE = {
       kicker:'Café & lait en poudre',
       name:'Cappuccino',
       desc:'Un café onctueux à la mousse de lait généreuse, prêt en une capsule pour une pause gourmande.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'chocolat-chaud',
       kicker:'Boisson chocolatée',
       name:'Chocolat Chaud',
       desc:'Une boisson chocolatée onctueuse et réconfortante, pour varier les plaisirs à la machine.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'latte-macchiato',
       kicker:'Café & lait',
       name:'Latte Macchiato',
       desc:'Un café tout en douceur, avec une belle couche de mousse de lait, pour une pause gourmande en milieu de journée.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     },
     {
       id:'the-earl-grey',
       kicker:'Infusion',
       name:'Thé Earl Grey',
       desc:'Une infusion parfumée à la bergamote, pour varier les plaisirs entre deux cafés.',
-      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
+      formats:[ {label:'Boîte de 48 capsules'} ]
     }
   ],
 
