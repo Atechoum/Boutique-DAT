@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon compte — D.A.T. La boutique</title>
+<meta name="description" content="Connectez-vous ou créez un compte pour retrouver vos informations de livraison et l'historique de vos commandes de capsules Lavazza FIRMA.">
+<link rel="canonical" href="https://datcafe.fr/mon-compte.html">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<meta name="robots" content="noindex">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mon compte — D.A.T. La boutique">
+<meta property="og:description" content="Connectez-vous ou créez un compte pour retrouver vos informations de livraison et l'historique de vos commandes de capsules Lavazza FIRMA.">
+<meta property="og:url" content="https://datcafe.fr/mon-compte.html">
+<meta property="og:image" content="https://datcafe.fr/images/og-image.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="D.A.T. — Distribution Automatique Toulousaine">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* ==========================================================================
+   D.A.T. — Distribution Automatique Toulousaine
+   Système : navy logo + accent crema + grille "sélection distributeur"
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --navy-900:#0A2647;
+  --navy-800:#16325A;
+  --navy-700:#274876;
+  --navy-600:#3A5F94;
+  --bg:#F4F6F8;
+  --bg-alt:#E9EDF2;
+  --panel:#FFFFFF;
+  --gold:#DCE6F2;
+  --gold-dark:#2C5FA3;
+  --ink:#16233A;
+  --muted:#64748B;
+  --line:#DDE3EA;
+  --radius:2px;
+  --max:1180px;
+  --shadow: 0 18px 40px -20px rgba(10,38,71,.35);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+
+h1,h2,h3,.display{
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  line-height:1.02;
+  margin:0;
+  color:var(--navy-900);
+}
+
+a{ color:inherit; }
+img{ max-width:100%; display:block; }
+
+:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:3px;
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 28px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:15px;
+  padding:14px 26px;
+  border-radius:var(--radius);
+  border:2px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  transition:transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn:disabled{ opacity:.55; cursor:not-allowed; transform:none; }
+.btn-gold{ background:var(--gold); color:var(--navy-900); }
+.btn-gold:hover{ background:var(--gold-dark); color:#fff; }
+.btn-outline-navy{ background:transparent; border-color:var(--navy-800); color:var(--navy-800); }
+.btn-outline-navy:hover{ background:var(--navy-800); color:#fff; }
+.btn-block{ width:100%; justify-content:center; }
+
+/* ---------- Header ---------- */
+.topbar{
+  background:var(--navy-900); color:#fff;
+  font-family:'Poppins',sans-serif; font-size:12.5px; letter-spacing:.05em;
+  padding:10px 0;
+}
+.topbar-inner{ position:relative; display:flex; justify-content:space-between; align-items:center; }
+.topbar-brand{ font-weight:600; }
+.topbar-center{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:16px; }
+.topbar-tel{ color:#fff; text-decoration:none; font-weight:600; }
+.topbar-tel:hover{ text-decoration:underline; }
+.topbar-tag{ font-weight:700; text-transform:uppercase; color:#fff; }
+.topbar-linkedin{ display:flex; align-items:center; color:#fff; }
+.topbar-linkedin svg{ width:16px; height:16px; display:block; }
+.topbar-linkedin:hover{ color:var(--gold); }
+.navbar2{
+  position:sticky; top:0; z-index:50;
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+.navbar2-inner{ display:flex; align-items:center; min-height:44px; position:relative; }
+.navbar2-inner > a{ flex:none; margin-left:-110px; }
+.navbar2-logo{ height:62px; width:auto; display:block; }
+.navbar2-inner nav{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:22px; }
+.navbar2 nav a{
+  text-decoration:none; color:var(--navy-800);
+  font-family:'Poppins',sans-serif;
+  font-weight:700; text-transform:uppercase; letter-spacing:.02em; font-size:13px;
+  padding:6px 2px; border-bottom:2px solid transparent; white-space:nowrap;
+}
+.navbar2 nav a:hover, .navbar2 nav a[aria-current="page"]{ border-bottom-color:var(--gold-dark); }
+.nav-tools{ position:absolute; right:0; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:22px; }
+.account-wrap{ position:relative; }
+.account-btn{
+  background:none; border:none; cursor:pointer; padding:0;
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  color:var(--navy-800); font-family:'Poppins',sans-serif;
+  font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
+  text-decoration:none;
+}
+.account-btn svg{ width:19px; height:19px; }
+.account-btn.is-active{ color:var(--gold-dark); }
+
+.nav-toggle{
+  display:none; align-items:center; justify-content:center;
+  width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0;
+  position:absolute; right:0; top:50%; transform:translateY(-50%);
+  color:var(--navy-900); z-index:5;
+}
+.nav-toggle svg{ width:24px; height:24px; display:block; }
+@media (max-width:760px){
+  .navbar2-inner > a{ margin-left:0; }
+  .nav-toggle{ display:flex; }
+  .navbar2-inner nav{ display:none; }
+  .topbar-tag{ display:none; }
+}
+@media (max-width:900px){
+  .topbar-inner{ flex-direction:column; align-items:center; gap:5px; padding:6px 0; }
+  .topbar-center{ position:static; transform:none; }
+}
+@media (max-width:480px){
+  .topbar-brand{ font-size:10.5px; }
+  .topbar-center{ gap:8px; }
+  .topbar-tel{ font-size:10.5px; }
+}
+
+/* ---------- Page header ---------- */
+.page-hero{ background:var(--navy-900); color:#fff; padding:64px 0 56px; }
+.page-hero h1{ color:#fff; font-size:clamp(34px,4.4vw,52px); }
+.page-hero p{ color:rgba(255,255,255,.78); max-width:60ch; margin-top:16px; font-size:16.5px; }
+.breadcrumb{
+  font-family:'Poppins',sans-serif; font-size:12.5px; color:var(--gold);
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:18px;
+}
+
+section{ padding:64px 0; }
+.no-top-pad{ padding-top:0; }
+
+/* ---------- Auth (connexion / inscription) ---------- */
+.auth-wrap{ max-width:520px; margin:0 auto; }
+.auth-tabs{ display:flex; border:1px solid var(--line); border-bottom:none; border-radius:2px 2px 0 0; overflow:hidden; }
+.auth-tab{
+  flex:1; text-align:center; padding:16px; font-family:'Poppins',sans-serif; font-weight:700;
+  text-transform:uppercase; letter-spacing:.04em; font-size:13px;
+  background:var(--bg-alt); color:var(--muted); cursor:pointer; border:none;
+}
+.auth-tab.active{ background:#fff; color:var(--navy-900); }
+.auth-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:0 0 var(--radius) var(--radius);
+  padding:38px; box-shadow:var(--shadow);
+}
+.auth-panel{ display:none; }
+.auth-panel.active{ display:block; }
+.field{ margin-bottom:18px; }
+.field label{
+  display:block; font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:8px;
+}
+.field input{
+  width:100%; border:1px solid var(--line); border-radius:2px;
+  padding:12px 14px; font-family:'Poppins',sans-serif; font-size:15px; color:var(--ink);
+  background:#fff;
+}
+.field input:focus{
+  outline:none; border-color:var(--gold-dark); box-shadow:0 0 0 3px rgba(44,95,163,.18);
+}
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.auth-note{ font-size:13px; color:var(--muted); margin-top:16px; text-align:center; }
+.auth-status{ font-size:13.5px; margin-top:14px; padding:12px 14px; border-radius:2px; display:none; }
+.auth-status.show{ display:block; }
+.auth-status.error{ background:#FBEAEA; color:#9B2C2C; }
+.auth-status.success{ background:#E6F4EA; color:#1E5631; }
+.auth-status.info{ background:var(--bg-alt); color:var(--ink); }
+.config-warning{
+  max-width:640px; margin:0 auto 32px; background:#FBEAEA; color:#9B2C2C;
+  border:1px solid #F0C4C4; border-radius:2px; padding:18px 22px; font-size:14px; line-height:1.6;
+}
+.config-warning code{ background:rgba(0,0,0,.06); padding:1px 6px; border-radius:2px; font-size:12.5px; }
+
+/* ---------- Dashboard ---------- */
+.dash-header{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:40px; }
+.dash-header h2{ font-size:clamp(26px,3vw,36px); }
+.dash-header p{ color:var(--muted); margin-top:6px; }
+.dashboard-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:48px; align-items:start; }
+.account-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:32px; position:sticky; top:100px;
+}
+.account-card h3{ font-size:18px; margin-bottom:20px; }
+.account-info-list{ list-style:none; margin:0 0 24px; padding:0; display:flex; flex-direction:column; gap:14px; }
+.account-info-list li{ font-size:14px; }
+.account-info-list .label{ display:block; font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--muted); margin-bottom:3px; }
+.account-info-list .value{ color:var(--ink); font-weight:600; }
+.orders-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:32px;
+}
+.orders-card h3{ font-size:18px; margin-bottom:20px; }
+.orders-table{ width:100%; border-collapse:collapse; font-size:14px; }
+.orders-table th{
+  text-align:left; color:var(--muted); text-transform:uppercase; font-size:11px; letter-spacing:.05em;
+  padding:10px 8px; border-bottom:2px solid var(--navy-900);
+}
+.orders-table td{ padding:14px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+.orders-table tr:last-child td{ border-bottom:none; }
+.order-status-badge{
+  display:inline-block; padding:4px 12px; border-radius:20px; background:var(--gold); color:var(--navy-900);
+  font-size:11px; font-family:'Poppins',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+}
+.order-items{ color:var(--muted); font-size:13px; margin-top:4px; }
+.orders-empty{ color:var(--muted); font-size:14.5px; text-align:center; padding:40px 0; }
+
+/* ---------- Footer ---------- */
+.site-footer{ background:var(--navy-900); color:rgba(255,255,255,.75); }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; padding:70px 0 40px; }
+.footer-grid h4{ color:#fff; font-family:'Poppins',sans-serif; text-transform:uppercase; letter-spacing:.06em; font-size:15px; margin:0 0 16px; }
+.footer-grid a{ text-decoration:none; color:rgba(255,255,255,.72); }
+.footer-grid a:hover{ color:var(--gold); }
+.footer-links{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; font-size:14.5px; }
+.footer-logo{ font-family:'Poppins',sans-serif; font-weight:800; font-size:26px; color:#fff; letter-spacing:.02em; }
+.footer-tagline{ margin-top:14px; max-width:32ch; font-size:14.5px; }
+.footer-bottom{ border-top:1px solid rgba(255,255,255,.14); padding:22px 0; font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.footer-legal-links a{ color:rgba(255,255,255,.72); text-decoration:none; }
+.footer-legal-links a:hover{ color:var(--gold); }
+.footer-legal-links span{ color:rgba(255,255,255,.4); margin:0 6px; }
+
+@media (max-width:960px){
+  .dashboard-grid{ grid-template-columns:1fr; }
+  .account-card{ position:static; }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:640px){
+  .form-row{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; }
+  .auth-card{ padding:26px; }
+  .orders-table{ font-size:13px; }
+  .orders-table th:nth-child(3), .orders-table td:nth-child(3){ display:none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="topbar-brand">D.A.T Distribution Automatique Toulousaine</span>
+      <div class="topbar-center">
+        <a href="tel:+33534480059" class="topbar-tel">05 34 48 00 59</a>
+        <a href="#" class="topbar-linkedin" aria-label="D.A.T. sur LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+      </div>
+      <span class="topbar-tag">Distributeur agréé Lavazza</span>
+    </div>
+  </div>
+  <div class="navbar2">
+    <div class="wrap navbar2-inner">
+      <a href="index.html"><img src="images/logo-dat.png" alt="D.A.T. — Distribution Automatique Toulousaine" class="navbar2-logo"></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav aria-label="Navigation principale" id="site-nav">
+        <a href="capsules-cafe.html">Capsules Café</a>
+        <a href="boissons-gourmandes.html">Boissons Gourmandes</a>
+        <a href="accessoires.html">Accessoire</a>
+      </nav>
+      <div class="nav-tools">
+        <div class="account-wrap">
+          <a href="mon-compte.html" class="account-btn is-active" id="account-btn" aria-current="page">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span id="account-label">Mon compte</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="breadcrumb">Mon compte</p>
+      <h1 id="page-title">Mon compte</h1>
+      <p id="page-subtitle">Connectez-vous ou créez un compte pour retrouver vos informations de livraison et suivre vos commandes de capsules Lavazza FIRMA.</p>
+    </div>
+  </section>
+
+  <section class="no-top-pad">
+    <div class="wrap">
+
+      <div id="config-warning" class="config-warning" style="display:none;">
+        La création de compte n'est pas encore activée sur ce site : le projet Supabase n'a pas été connecté.
+        Complétez le fichier <code>supabase-config.js</code> avec l'URL et la clé de votre projet (voir <code>SETUP-COMPTE-CLIENT.md</code>).
+      </div>
+
+      <!-- ============================================================
+           Vue "non connecté" : onglets connexion / inscription
+           ============================================================ -->
+      <div id="auth-view" class="auth-wrap">
+        <div class="auth-tabs">
+          <button type="button" class="auth-tab active" id="tab-login">Se connecter</button>
+          <button type="button" class="auth-tab" id="tab-signup">Créer un compte</button>
+        </div>
+        <div class="auth-card">
+
+          <div class="auth-panel active" id="panel-login">
+            <form id="login-form">
+              <div class="field">
+                <label for="login-email">E-mail</label>
+                <input type="email" id="login-email" name="email" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="login-password">Mot de passe</label>
+                <input type="password" id="login-password" name="password" required autocomplete="current-password">
+              </div>
+              <button type="submit" class="btn btn-gold btn-block" id="login-submit">Se connecter</button>
+            </form>
+            <p class="auth-note">Pas encore de compte&nbsp;? <a href="#" id="go-to-signup" style="color:var(--gold-dark); text-decoration:underline;">Créez-en un</a>.</p>
+            <div class="auth-status" id="login-status"></div>
+          </div>
+
+          <div class="auth-panel" id="panel-signup">
+            <form id="signup-form">
+              <div class="form-row">
+                <div class="field">
+                  <label for="signup-nom">Nom</label>
+                  <input type="text" id="signup-nom" name="nom" required autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="signup-societe">Société</label>
+                  <input type="text" id="signup-societe" name="societe" autocomplete="organization">
+                </div>
+              </div>
+              <div class="field">
+                <label for="signup-email">E-mail</label>
+                <input type="email" id="signup-email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="signup-telephone">Téléphone</label>
+                  <input type="tel" id="signup-telephone" name="telephone" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="signup-password">Mot de passe</label>
+                  <input type="password" id="signup-password" name="password" required minlength="6" autocomplete="new-password">
+                </div>
+              </div>
+              <div class="field">
+                <label for="signup-adresse">Adresse de livraison</label>
+                <input type="text" id="signup-adresse" name="adresse" placeholder="N°, rue, code postal, ville" autocomplete="street-address">
+              </div>
+              <button type="submit" class="btn btn-gold btn-block" id="signup-submit">Créer mon compte</button>
+            </form>
+            <p class="auth-note">Déjà un compte&nbsp;? <a href="#" id="go-to-login" style="color:var(--gold-dark); text-decoration:underline;">Connectez-vous</a>.</p>
+            <div class="auth-status" id="signup-status"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============================================================
+           Vue "connecté" : tableau de bord + historique de commandes
+           ============================================================ -->
+      <div id="dashboard-view" style="display:none;">
+        <div class="dash-header">
+          <div>
+            <h2 id="dash-greeting">Bonjour</h2>
+            <p>Retrouvez vos informations et l'historique de vos commandes.</p>
+          </div>
+          <button type="button" class="btn btn-outline-navy" id="logout-btn">Se déconnecter</button>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="account-card">
+            <h3>Mes informations</h3>
+            <form id="profile-form">
+              <div class="field">
+                <label for="profile-nom">Nom</label>
+                <input type="text" id="profile-nom" name="nom">
+              </div>
+              <div class="field">
+                <label for="profile-societe">Société</label>
+                <input type="text" id="profile-societe" name="societe">
+              </div>
+              <div class="field">
+                <label for="profile-email">E-mail</label>
+                <input type="email" id="profile-email" disabled>
+              </div>
+              <div class="field">
+                <label for="profile-telephone">Téléphone</label>
+                <input type="tel" id="profile-telephone" name="telephone">
+              </div>
+              <div class="field">
+                <label for="profile-adresse">Adresse de livraison</label>
+                <input type="text" id="profile-adresse" name="adresse">
+              </div>
+              <button type="submit" class="btn btn-gold btn-block" id="profile-submit">Enregistrer</button>
+              <div class="auth-status" id="profile-status"></div>
+            </form>
+          </div>
+
+          <div class="orders-card">
+            <h3>Historique des commandes</h3>
+            <div id="orders-list">
+              <p class="orders-empty">Chargement de vos commandes…</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-logo">D.A.T.</p>
+      <p class="footer-tagline">Distribution Automatique Toulousaine — café, snacking et fontaines à eau en entreprise.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="distributeurs-automatiques.html">Distributeurs Automatiques</a></li>
+        <li><a href="capsules-lavazza.html">Machines à capsules LAVAZZA</a></li>
+        <li><a href="grains-lavazza.html">Machine à Grains LAVAZZA</a></li>
+        <li><a href="fontaines-eau.html">Fontaines à Eau</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>La boutique</h4>
+      <ul class="footer-links">
+        <li><a href="capsules-cafe.html">Capsules Café</a></li>
+        <li><a href="boissons-gourmandes.html">Boissons Gourmandes</a></li>
+        <li><a href="accessoires.html">Accessoire</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li>Toulouse</li>
+        <li><a href="tel:+33534480059">05 34 48 00 59</a></li>
+        <li><a href="contact.html">Demander un devis</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 D.A.T. — Distribution Automatique Toulousaine</span>
+    <span class="footer-legal-links"><a href="mentions-legales.html">Mentions légales</a><span>·</span><a href="politique-de-confidentialite.html">Politique de confidentialité</a></span>
+    <span>Toulouse, France</span>
+  </div>
+</footer>
+
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+<script>
+(function(){
+  var navToggle = document.getElementById('nav-toggle');
+  var siteNav = document.getElementById('site-nav');
+  navToggle.addEventListener('click', function(){
+    var open = siteNav.style.display === 'flex';
+    siteNav.style.display = open ? 'none' : 'flex';
+    siteNav.style.flexDirection = 'column';
+    navToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+  });
+
+  var authView = document.getElementById('auth-view');
+  var dashboardView = document.getElementById('dashboard-view');
+  var configWarning = document.getElementById('config-warning');
+
+  /* ---------- Onglets connexion / inscription ---------- */
+  var tabLogin = document.getElementById('tab-login');
+  var tabSignup = document.getElementById('tab-signup');
+  var panelLogin = document.getElementById('panel-login');
+  var panelSignup = document.getElementById('panel-signup');
+
+  function showLoginTab(){
+    tabLogin.classList.add('active'); tabSignup.classList.remove('active');
+    panelLogin.classList.add('active'); panelSignup.classList.remove('active');
+  }
+  function showSignupTab(){
+    tabSignup.classList.add('active'); tabLogin.classList.remove('active');
+    panelSignup.classList.add('active'); panelLogin.classList.remove('active');
+  }
+  tabLogin.addEventListener('click', showLoginTab);
+  tabSignup.addEventListener('click', showSignupTab);
+  document.getElementById('go-to-signup').addEventListener('click', function(e){ e.preventDefault(); showSignupTab(); });
+  document.getElementById('go-to-login').addEventListener('click', function(e){ e.preventDefault(); showLoginTab(); });
+
+  function setStatus(el, type, msg){
+    el.textContent = msg;
+    el.className = 'auth-status show ' + type;
+  }
+
+  if(!window.DAT_AUTH || !window.DAT_AUTH.isConfigured){
+    configWarning.style.display = 'block';
+  }
+
+  /* ---------- Connexion ---------- */
+  document.getElementById('login-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var status = document.getElementById('login-status');
+    var btn = document.getElementById('login-submit');
+    btn.disabled = true; btn.textContent = 'Connexion…';
+    var email = document.getElementById('login-email').value;
+    var password = document.getElementById('login-password').value;
+
+    var res = await window.DAT_AUTH.signIn(email, password);
+    btn.disabled = false; btn.textContent = 'Se connecter';
+
+    if(res.error){
+      setStatus(status, 'error', res.error.message || "Identifiants incorrects.");
+      return;
+    }
+    setStatus(status, 'success', 'Connecté !');
+    loadDashboard();
+  });
+
+  /* ---------- Inscription ---------- */
+  document.getElementById('signup-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var status = document.getElementById('signup-status');
+    var btn = document.getElementById('signup-submit');
+    btn.disabled = true; btn.textContent = 'Création…';
+
+    var email = document.getElementById('signup-email').value;
+    var password = document.getElementById('signup-password').value;
+    var meta = {
+      nom: document.getElementById('signup-nom').value,
+      societe: document.getElementById('signup-societe').value,
+      telephone: document.getElementById('signup-telephone').value,
+      adresse: document.getElementById('signup-adresse').value
+    };
+
+    var res = await window.DAT_AUTH.signUp(email, password, meta);
+    btn.disabled = false; btn.textContent = 'Créer mon compte';
+
+    if(res.error){
+      setStatus(status, 'error', res.error.message || "Impossible de créer le compte.");
+      return;
+    }
+    if(res.data && res.data.session){
+      setStatus(status, 'success', 'Compte créé et connecté !');
+      loadDashboard();
+    } else {
+      setStatus(status, 'info', 'Compte créé. Vérifiez votre boîte mail pour confirmer votre adresse, puis connectez-vous.');
+      showLoginTab();
+    }
+  });
+
+  /* ---------- Déconnexion ---------- */
+  document.getElementById('logout-btn').addEventListener('click', async function(){
+    await window.DAT_AUTH.signOut();
+    dashboardView.style.display = 'none';
+    authView.style.display = 'block';
+    showLoginTab();
+  });
+
+  /* ---------- Formulaire profil (dans le dashboard) ---------- */
+  document.getElementById('profile-form').addEventListener('submit', async function(e){
+    e.preventDefault();
+    var status = document.getElementById('profile-status');
+    var btn = document.getElementById('profile-submit');
+    btn.disabled = true; btn.textContent = 'Enregistrement…';
+
+    var session = await window.DAT_AUTH.getSession();
+    if(!session){ btn.disabled = false; btn.textContent = 'Enregistrer'; return; }
+
+    var fields = {
+      nom: document.getElementById('profile-nom').value,
+      societe: document.getElementById('profile-societe').value,
+      telephone: document.getElementById('profile-telephone').value,
+      adresse: document.getElementById('profile-adresse').value
+    };
+    var res = await window.DAT_AUTH.updateProfile(session.user.id, fields);
+    btn.disabled = false; btn.textContent = 'Enregistrer';
+
+    if(res.error){
+      setStatus(status, 'error', "Impossible d'enregistrer vos informations.");
+    } else {
+      setStatus(status, 'success', 'Informations enregistrées.');
+      document.getElementById('dash-greeting').textContent = 'Bonjour ' + (fields.nom ? fields.nom.split(' ')[0] : '');
+    }
+  });
+
+  /* ---------- Chargement du tableau de bord ---------- */
+  async function loadDashboard(){
+    var session = await window.DAT_AUTH.getSession();
+    if(!session || !session.user){
+      authView.style.display = 'block';
+      dashboardView.style.display = 'none';
+      return;
+    }
+
+    authView.style.display = 'none';
+    dashboardView.style.display = 'block';
+    document.getElementById('page-title').textContent = 'Mon compte';
+    document.getElementById('page-subtitle').textContent = 'Gérez vos informations et retrouvez l\u2019historique de vos commandes.';
+
+    var profile = await window.DAT_AUTH.getProfile(session.user.id);
+    document.getElementById('dash-greeting').textContent = 'Bonjour' + (profile && profile.nom ? ' ' + profile.nom.split(' ')[0] : '');
+    document.getElementById('profile-email').value = session.user.email || '';
+    if(profile){
+      document.getElementById('profile-nom').value = profile.nom || '';
+      document.getElementById('profile-societe').value = profile.societe || '';
+      document.getElementById('profile-telephone').value = profile.telephone || '';
+      document.getElementById('profile-adresse').value = profile.adresse || '';
+    }
+
+    var orders = await window.DAT_AUTH.getOrders(session.user.id);
+    var ordersList = document.getElementById('orders-list');
+    if(!orders || orders.length === 0){
+      ordersList.innerHTML = '<p class="orders-empty">Vous n\u2019avez pas encore passé de commande. <a href="index.html" style="color:var(--gold-dark);">Découvrir la boutique</a>.</p>';
+      return;
+    }
+
+    var rows = orders.map(function(o){
+      var date = new Date(o.created_at).toLocaleDateString('fr-FR', { day:'2-digit', month:'long', year:'numeric' });
+      var itemsSummary = (o.panier || []).map(function(it){
+        return it.name + ' (boîte de ' + it.size + ' × ' + it.qty + ')';
+      }).join(', ');
+      return '<tr>' +
+        '<td>' + date + '</td>' +
+        '<td>' + itemsSummary + '</td>' +
+        '<td><span class="order-status-badge">' + (o.statut || 'Reçue') + '</span></td>' +
+      '</tr>';
+    }).join('');
+
+    ordersList.innerHTML =
+      '<table class="orders-table">' +
+        '<thead><tr><th>Date</th><th>Contenu</th><th>Statut</th></tr></thead>' +
+        '<tbody>' + rows + '</tbody>' +
+      '</table>';
+  }
+
+  /* ---------- Vérifie la session au chargement de la page ---------- */
+  (async function init(){
+    if(!window.DAT_AUTH || !window.DAT_AUTH.isConfigured) return;
+    var session = await window.DAT_AUTH.getSession();
+    if(session && session.user){
+      loadDashboard();
+    }
+  })();
+})();
+</script>
+</body>
+</html>

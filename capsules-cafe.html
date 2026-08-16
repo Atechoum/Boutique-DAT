@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D.A.T. — Capsules Café Lavazza FIRMA | Distribution Automatique Toulousaine</title>
+<meta name="description" content="Commandez vos boîtes de capsules café Lavazza FIRMA en ligne : Milano, Napoli, Roma, Torino, Torino Lungo. Livraison directe à votre bureau.">
+<link rel="canonical" href="https://datcafe.fr/capsules-cafe.html">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="D.A.T. — Capsules Café Lavazza FIRMA | Distribution Automatique Toulousaine">
+<meta property="og:description" content="Commandez vos boîtes de capsules café Lavazza FIRMA en ligne : Milano, Napoli, Roma, Torino, Torino Lungo. Livraison directe à votre bureau.">
+<meta property="og:url" content="https://datcafe.fr/capsules-cafe.html">
+<meta property="og:image" content="https://datcafe.fr/images/og-image.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="D.A.T. — Distribution Automatique Toulousaine">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "D.A.T. — Distribution Automatique Toulousaine",
+  "image": "https://datcafe.fr/images/og-image.jpg",
+  "email": "dat.cafe@orange.fr",
+  "telephone": "+33534480059",
+  "url": "https://datcafe.fr/",
+  "areaServed": {
+    "@type": "City",
+    "name": "Toulouse"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2 rue Marcel Langer",
+    "postalCode": "31600",
+    "addressLocality": "Seysses",
+    "addressRegion": "Haute-Garonne",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:30",
+    "closes": "18:00"
+  }
+}
+</script>
+
+<style>
+/* ==========================================================================
+   D.A.T. — Distribution Automatique Toulousaine
+   Système : navy logo + accent crema + grille "sélection distributeur"
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --navy-900:#0A2647;
+  --navy-800:#16325A;
+  --navy-700:#274876;
+  --navy-600:#3A5F94;
+  --bg:#F4F6F8;
+  --bg-alt:#E9EDF2;
+  --panel:#FFFFFF;
+  --gold:#DCE6F2;
+  --gold-dark:#2C5FA3;
+  --ink:#16233A;
+  --muted:#64748B;
+  --line:#DDE3EA;
+  --radius:2px;
+  --max:1180px;
+  --shadow: 0 18px 40px -20px rgba(10,38,71,.35);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+}
+
+body{
+  margin:0;
+  font-family:'Poppins',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+
+h1,h2,h3,.display{
+  font-family:'Poppins',sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.01em;
+  line-height:1.02;
+  margin:0;
+  color:var(--navy-900);
+}
+
+.mono{
+  font-family:'Poppins',sans-serif;
+  letter-spacing:.03em;
+}
+
+a{ color:inherit; }
+img{ max-width:100%; display:block; }
+
+:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:3px;
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 28px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Poppins',sans-serif;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-size:15px;
+  padding:14px 26px;
+  border-radius:var(--radius);
+  border:2px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  transition:transform .15s ease, background .15s ease, color .15s ease, border-color .15s ease;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn:disabled{ opacity:.55; cursor:not-allowed; transform:none; }
+.btn-gold{
+  background:var(--gold);
+  color:var(--navy-900);
+}
+.btn-gold:hover{ background:var(--gold-dark); color:#fff; }
+.btn-outline{
+  background:transparent;
+  border-color:rgba(255,255,255,.55);
+  color:#fff;
+}
+.btn-outline:hover{ background:rgba(255,255,255,.12); border-color:#fff; }
+.btn-outline-navy{
+  background:transparent;
+  border-color:var(--navy-800);
+  color:var(--navy-800);
+}
+.btn-outline-navy:hover{ background:var(--navy-800); color:#fff; }
+
+/* ---------- Header (style page de garde) ---------- */
+.topbar{
+  background:var(--navy-900); color:#fff;
+  font-family:'Poppins',sans-serif; font-size:12.5px; letter-spacing:.05em;
+  padding:10px 0;
+}
+.topbar-inner{ position:relative; display:flex; justify-content:space-between; align-items:center; }
+.topbar-brand{ font-weight:600; }
+.topbar-center{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:16px; }
+.topbar-tel{ color:#fff; text-decoration:none; font-weight:600; }
+.topbar-tel:hover{ text-decoration:underline; }
+.topbar-tag{ font-weight:700; text-transform:uppercase; color:#fff; }
+.topbar-linkedin{ display:flex; align-items:center; color:#fff; }
+.topbar-linkedin svg{ width:16px; height:16px; display:block; }
+.topbar-linkedin:hover{ color:var(--gold); }
+.navbar2{
+  position:sticky; top:0; z-index:50;
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  padding:18px 0;
+}
+.navbar2-inner{ display:flex; align-items:center; min-height:44px; position:relative; }
+.navbar2-inner > a{ flex:none; margin-left:-110px; }
+.navbar2-logo{ height:62px; width:auto; display:block; }
+.navbar2-inner nav{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center; gap:22px; }
+.navbar2 nav{ display:flex; align-items:center; gap:22px; }
+.navbar2 nav a{
+  text-decoration:none; color:var(--navy-800);
+  font-family:'Poppins',sans-serif;
+  font-weight:700; text-transform:uppercase; letter-spacing:.02em; font-size:13px;
+  padding:6px 2px; border-bottom:2px solid transparent; white-space:nowrap;
+}
+.navbar2 nav a:hover, .navbar2 nav a[aria-current="page"]{ border-bottom-color:var(--gold-dark); }
+
+/* ---------- Outils nav (recherche + panier) ---------- */
+.nav-tools{ position:absolute; right:0; top:50%; transform:translateY(-50%); display:flex; align-items:center; gap:22px; }
+.search-wrap{ position:relative; }
+.search-btn{
+  background:none; border:none; cursor:pointer; padding:0;
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  color:var(--navy-800); font-family:'Poppins',sans-serif;
+  font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
+}
+.search-btn svg{ width:19px; height:19px; }
+.search-panel{
+  display:none; position:absolute; right:0; top:calc(100% + 12px);
+  background:#fff; border:1px solid var(--line); box-shadow:var(--shadow);
+  padding:14px; border-radius:4px; width:250px; z-index:60;
+}
+.search-panel.open{ display:block; }
+.search-panel input{
+  width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:2px;
+  font-family:'Poppins',sans-serif; font-size:14px; margin-bottom:10px; box-sizing:border-box;
+}
+.search-panel .btn{ width:100%; justify-content:center; padding:10px; font-size:13px; }
+.search-results{ margin-top:10px; max-height:260px; overflow-y:auto; }
+.search-results:empty{ margin-top:0; }
+
+.cart-wrap{ position:relative; }
+.cart-btn{
+  background:none; border:none; cursor:pointer; padding:0;
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  color:var(--navy-800); font-family:'Poppins',sans-serif;
+  font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
+  position:relative;
+}
+.cart-btn svg{ width:19px; height:19px; }
+.cart-badge{
+  position:absolute; top:-7px; right:-10px;
+  background:var(--gold-dark); color:#fff; font-family:'Poppins',sans-serif;
+  font-weight:700; font-size:10px; width:16px; height:16px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; line-height:1;
+}
+.cart-badge:empty, .cart-badge.zero{ display:none; }
+.cart-panel{
+  display:none; position:absolute; right:0; top:calc(100% + 12px);
+  background:#fff; border:1px solid var(--line); box-shadow:var(--shadow);
+  padding:20px; border-radius:4px; width:340px; max-height:76vh; overflow-y:auto; z-index:60;
+}
+.cart-panel.open{ display:block; }
+.cart-panel h4{ font-size:15px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:14px; }
+.cart-item{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; padding:12px 0; border-top:1px solid var(--line); }
+.cart-item:first-child{ border-top:none; }
+.cart-item-name{ font-weight:700; color:var(--navy-900); font-size:13.5px; display:block; }
+.cart-item-meta{ color:var(--muted); font-size:12px; margin-top:2px; display:block; }
+.cart-item-remove{ background:none; border:none; color:var(--gold-dark); cursor:pointer; font-size:11.5px; text-decoration:underline; padding:0; margin-top:6px; font-family:'Poppins',sans-serif; }
+.cart-empty{ color:var(--muted); font-size:13.5px; text-align:center; padding:22px 0; }
+.cart-total-row{ display:flex; justify-content:space-between; align-items:center; font-family:'Poppins',sans-serif; font-weight:800; font-size:15px; padding-top:14px; margin-top:6px; border-top:2px solid var(--navy-900); color:var(--navy-900); }
+.cart-panel .btn{ width:100%; justify-content:center; margin-top:16px; }
+
+.account-wrap{ position:relative; }
+.account-btn{
+  background:none; border:none; cursor:pointer; padding:0;
+  display:flex; flex-direction:column; align-items:center; gap:3px;
+  color:var(--navy-800); font-family:'Poppins',sans-serif;
+  font-size:9.5px; letter-spacing:.06em; text-transform:uppercase;
+  text-decoration:none;
+}
+.account-btn svg{ width:19px; height:19px; }
+
+/* ---------- Bouton devis flottant ---------- */
+.floating-devis{
+  position:fixed; right:24px; bottom:24px; z-index:90;
+  box-shadow:0 14px 30px -10px rgba(10,38,71,.45);
+}
+@media (max-width:640px){
+  .floating-devis{ right:16px; bottom:16px; padding:12px 18px; font-size:13px; }
+}
+
+/* ---------- Menu mobile ---------- */
+.nav-toggle{
+  display:none; align-items:center; justify-content:center;
+  width:34px; height:34px; background:none; border:none; cursor:pointer; padding:0;
+  position:absolute; right:78px; top:50%; transform:translateY(-50%);
+  color:var(--navy-900); z-index:5;
+}
+.nav-toggle svg{ width:24px; height:24px; display:block; }
+@media (max-width:1290px){
+  .navbar2-inner > a{ margin-left:0; }
+  .nav-toggle{ display:flex; }
+  .navbar2-inner nav{
+    display:none;
+    position:absolute; top:100%; left:0; right:0; transform:none;
+    background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    flex-direction:column; align-items:stretch; gap:0; padding:6px 0;
+    box-shadow:var(--shadow);
+  }
+  .navbar2-inner nav.open{ display:flex; }
+  .navbar2-inner nav a{ padding:14px 28px; border-bottom:1px solid var(--line); white-space:normal; }
+  .navbar2-inner nav a:last-child{ border-bottom:none; }
+  .topbar-tag{ display:none; }
+}
+@media (max-width:900px){
+  .topbar-inner{ flex-direction:column; align-items:center; gap:5px; padding:6px 0; }
+  .topbar-center{ position:static; transform:none; }
+}
+@media (max-width:480px){
+  .topbar-brand{ font-size:10.5px; }
+  .topbar-center{ gap:8px; }
+  .topbar-tel{ font-size:10.5px; }
+}
+.search-result{
+  display:block; text-decoration:none; padding:9px 8px; border-radius:2px;
+  color:var(--ink); font-size:13.5px; border-top:1px solid var(--line);
+}
+.search-result:first-child{ border-top:none; }
+.search-result:hover{ background:var(--bg-alt); }
+.search-result .sr-title{
+  display:block; font-family:'Poppins',sans-serif; font-weight:700; font-size:13.5px; color:var(--navy-900);
+}
+.search-result .sr-snippet{ display:block; color:var(--muted); font-size:12.5px; margin-top:2px; }
+.search-empty{ font-size:13px; color:var(--muted); margin-top:10px; }
+.search-empty a{ color:var(--gold-dark); }
+
+/* ---------- Section shell ---------- */
+section{ padding:88px 0; }
+.section-head{
+  display:flex; justify-content:space-between; align-items:flex-end; gap:24px;
+  margin-bottom:46px; flex-wrap:wrap;
+}
+.section-head h2{ font-size:clamp(30px,3.6vw,44px); max-width:20ch; }
+.section-head p{ max-width:44ch; color:var(--muted); font-size:16px; }
+.tag{
+  font-family:'Poppins',sans-serif;
+  font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--gold-dark);
+  display:inline-block; margin-bottom:12px;
+}
+
+/* ---------- Process ---------- */
+.process{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:36px;
+}
+.process-step{ border-top:3px solid var(--navy-800); padding-top:20px; }
+.process-step .num{
+  font-family:'Poppins',sans-serif;
+  font-size:52px; font-weight:800; color:var(--gold);
+  display:block; line-height:1;
+}
+.process-step h3{ margin:14px 0 10px; font-size:22px; }
+.process-step p{ color:var(--muted); font-size:15px; margin:0; }
+
+/* ---------- Bande CTA ---------- */
+.cta-band{
+  background:var(--gold);
+  color:var(--navy-900);
+}
+.cta-band .wrap{
+  display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  padding:52px 28px;
+}
+.cta-band h2{ color:var(--navy-900); font-size:clamp(26px,3vw,36px); max-width:16ch; }
+.cta-band .btn-outline-navy{ border-color:var(--navy-900); color:var(--navy-900); }
+.cta-band .btn-outline-navy:hover{ background:var(--navy-900); color:#fff; }
+
+/* ---------- Footer ---------- */
+.site-footer{ background:var(--navy-900); color:rgba(255,255,255,.75); }
+.footer-grid{
+  display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;
+  padding:70px 0 40px;
+}
+.footer-grid h4{
+  color:#fff; font-family:'Poppins',sans-serif; text-transform:uppercase;
+  letter-spacing:.06em; font-size:15px; margin:0 0 16px;
+}
+.footer-grid a{ text-decoration:none; color:rgba(255,255,255,.72); }
+.footer-grid a:hover{ color:var(--gold); }
+.footer-links{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; font-size:14.5px; }
+.footer-logo{
+  font-family:'Poppins',sans-serif; font-weight:800; font-size:26px; color:#fff; letter-spacing:.02em;
+}
+.footer-tagline{ margin-top:14px; max-width:32ch; font-size:14.5px; }
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.14);
+  padding:22px 0; font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+}
+.footer-legal-links a{ color:rgba(255,255,255,.72); text-decoration:none; }
+.footer-legal-links a:hover{ color:var(--gold); }
+.footer-legal-links span{ color:rgba(255,255,255,.4); margin:0 6px; }
+
+/* ---------- Page header (sous-pages) ---------- */
+.page-hero{
+  background:var(--navy-900); color:#fff; padding:64px 0 56px;
+}
+.page-hero h1{ color:#fff; font-size:clamp(36px,4.6vw,58px); }
+.page-hero p{ color:rgba(255,255,255,.78); max-width:60ch; margin-top:16px; font-size:16.5px; }
+.breadcrumb{
+  font-family:'Poppins',sans-serif; font-size:12.5px; color:var(--gold);
+  text-transform:uppercase; letter-spacing:.08em; margin-bottom:18px;
+}
+.page-hero-note{
+  display:inline-flex; align-items:center; gap:10px; margin-top:22px;
+  font-family:'Poppins',sans-serif; font-size:12.5px; letter-spacing:.04em;
+  color:rgba(255,255,255,.85); border:1px solid rgba(255,255,255,.28);
+  padding:9px 16px; border-radius:20px;
+}
+.page-hero-note::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none; }
+
+/* ---------- Boutique : grille produits ---------- */
+.no-top-pad{ padding-top:0; }
+.section-alt{ background:var(--bg-alt); }
+.shop-intro{ max-width:70ch; color:var(--muted); font-size:16px; margin-bottom:44px; }
+.shop-intro strong{ color:var(--ink); }
+.shop-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+  background:var(--line); border:1px solid var(--line);
+}
+.shop-card{
+  background:#fff; padding:0 0 26px; display:flex; flex-direction:column; gap:14px;
+  border-top:3px solid var(--gold);
+}
+.shop-card-media{
+  background:var(--bg-alt); aspect-ratio:1/1; display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.shop-card-media img{ width:78%; height:78%; object-fit:contain; }
+.shop-card-body{ padding:18px 26px 0; display:flex; flex-direction:column; gap:14px; flex:1; }
+.shop-card-body.no-media{ padding-top:32px; }
+.shop-card .kicker{ color:var(--gold-dark); font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:.1em; text-transform:uppercase; }
+.shop-card h3{ font-size:21px; margin:0; }
+.shop-card p.desc{ color:var(--muted); font-size:14.5px; margin:0; flex:1; line-height:1.5; }
+.shop-controls{ display:flex; flex-direction:column; gap:12px; margin-top:4px; padding-top:16px; border-top:1px solid var(--line); }
+.shop-row{ display:flex; gap:10px; align-items:center; }
+.format-select{
+  flex:1; border:1px solid var(--line); border-radius:2px; padding:10px 10px;
+  font-family:'Poppins',sans-serif; font-size:13px; background:#fff; color:var(--ink);
+}
+.qty-stepper{ display:flex; align-items:center; border:1px solid var(--line); border-radius:2px; flex:none; }
+.qty-stepper button{
+  width:34px; height:36px; border:none; background:var(--bg-alt); cursor:pointer;
+  font-size:17px; font-weight:700; color:var(--navy-800); font-family:'Poppins',sans-serif;
+}
+.qty-stepper button:hover{ background:var(--gold); }
+.qty-stepper input{
+  width:36px; height:36px; text-align:center; border:none; border-left:1px solid var(--line); border-right:1px solid var(--line);
+  font-family:'Poppins',sans-serif; font-size:14px; color:var(--ink);
+}
+.qty-stepper input::-webkit-outer-spin-button, .qty-stepper input::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+.btn-add{ width:100%; justify-content:center; }
+.btn-add.added{ background:var(--navy-900); color:#fff; }
+.shop-note{ margin-top:36px; font-size:13.5px; color:var(--muted); text-align:center; }
+.shop-note a{ color:var(--gold-dark); text-decoration:none; }
+.shop-note a:hover{ text-decoration:underline; }
+
+/* ---------- Checkout ---------- */
+.order-grid{ display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; align-items:start; }
+.order-recap-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:36px; position:sticky; top:110px;
+}
+.order-recap-card h3{ font-size:20px; margin-bottom:20px; }
+.order-recap-list{ display:flex; flex-direction:column; gap:0; }
+.order-recap-item{ display:flex; justify-content:space-between; gap:12px; padding:13px 0; border-top:1px solid var(--line); }
+.order-recap-item:first-child{ border-top:none; }
+.order-recap-item-name{ font-family:'Poppins',sans-serif; font-weight:700; font-size:14px; color:var(--navy-900); display:block; }
+.order-recap-item-meta{ font-size:12.5px; color:var(--muted); display:block; margin-top:2px; }
+.order-recap-empty{ color:var(--muted); font-size:14.5px; text-align:center; padding:30px 0; }
+.form-card{
+  background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+  padding:40px; box-shadow:var(--shadow);
+}
+.form-card-title{ font-size:22px; margin-bottom:6px; }
+.form-card-sub{ color:var(--muted); font-size:14.5px; margin-bottom:26px; }
+.form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.field{ margin-bottom:20px; }
+.field.full{ grid-column:1/-1; }
+.field label{
+  display:block; font-family:'Poppins',sans-serif; font-size:12px; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:8px;
+}
+.field input, .field select, .field textarea{
+  width:100%; border:1px solid var(--line); border-radius:2px;
+  padding:12px 14px; font-family:'Poppins',sans-serif; font-size:15px; color:var(--ink);
+  background:#fff;
+}
+.field textarea{ resize:vertical; min-height:90px; }
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none; border-color:var(--gold-dark); box-shadow:0 0 0 3px rgba(44,95,163,.18);
+}
+.form-note{ font-size:13px; color:var(--muted); margin-top:14px; }
+.btn-block{ width:100%; justify-content:center; }
+
+/* ---------- Responsive ---------- */
+@media (max-width:960px){
+  .shop-grid{ grid-template-columns:repeat(2,1fr); }
+  .process{ grid-template-columns:1fr; gap:28px; }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+  .order-grid{ grid-template-columns:1fr; }
+  .order-recap-card{ position:static; }
+  .form-row{ grid-template-columns:1fr; }
+}
+@media (max-width:640px){
+  .shop-grid{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; }
+  .cta-band .wrap{ flex-direction:column; align-items:flex-start; }
+  .cart-panel{ width:88vw; right:-58px; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="topbar-brand">D.A.T Distribution Automatique Toulousaine</span>
+      <div class="topbar-center">
+        <a href="tel:+33534480059" class="topbar-tel">05 34 48 00 59</a>
+        <a href="#" class="topbar-linkedin" aria-label="D.A.T. sur LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.44-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+      </div>
+      <span class="topbar-tag">Distributeur agréé Lavazza</span>
+    </div>
+  </div>
+  <div class="navbar2">
+    <div class="wrap navbar2-inner">
+      <a href="index.html"><img src="images/logo-dat.png" alt="D.A.T. — Distribution Automatique Toulousaine" class="navbar2-logo"></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <nav aria-label="Navigation principale" id="site-nav">
+      <a href="capsules-cafe.html" aria-current="page">Capsules Café</a>
+      <a href="boissons-gourmandes.html">Boissons Gourmandes</a>
+      <a href="accessoires.html">Accessoire</a>
+      </nav>
+      <div class="nav-tools">
+        <div class="search-wrap">
+          <button type="button" class="search-btn" id="search-toggle" aria-expanded="false" aria-controls="search-panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <span>Recherche</span>
+          </button>
+          <div class="search-panel" id="search-panel">
+            <form id="search-form">
+              <input type="search" id="search-input" placeholder="Rechercher sur le site…" aria-label="Rechercher sur le site">
+              <button type="submit" class="btn btn-gold">Rechercher</button>
+            </form>
+            <div id="search-results" class="search-results"></div>
+          </div>
+        </div>
+        <div class="cart-wrap">
+          <button type="button" class="cart-btn" id="cart-toggle" aria-expanded="false" aria-controls="cart-panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span id="cart-badge" class="cart-badge zero">0</span>
+            <span>Panier</span>
+          </button>
+          <div class="cart-panel" id="cart-panel">
+            <h4>Votre panier</h4>
+            <div id="cart-items"><p class="cart-empty">Votre panier est vide. Ajoutez des boîtes de capsules ci-dessous.</p></div>
+            <div id="cart-total-wrap"></div>
+            <a href="#commande" class="btn btn-gold" id="cart-checkout-btn" style="display:none;">Passer commande</a>
+          </div>
+        </div>
+        <div class="account-wrap">
+          <a href="mon-compte.html" class="account-btn" id="account-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span id="account-label">Mon compte</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="breadcrumb">Capsules Café</p>
+      <h1>Capsules Café Lavazza FIRMA</h1>
+      <p>Réapprovisionnez votre machine Lavazza FIRMA en quelques clics. Composez votre commande de boîtes de capsules café, choisissez vos formats et quantités, et envoyez votre demande directement à notre équipe.</p>
+      <span class="page-hero-note">Livraison directe à votre bureau · Pas de paiement en ligne, commande confirmée par nos équipes</span>
+    </div>
+  </section>
+
+  <section class="no-top-pad">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag">Gamme Lavazza FIRMA</span>
+          <h2>Choisissez vos capsules café</h2>
+        </div>
+        <p>Capsules exclusivement compatibles avec le système Lavazza FIRMA Inovy. Ajoutez vos références au panier, puis finalisez votre demande de commande en bas de page.</p>
+      </div>
+
+      <p class="shop-intro">Chaque boîte est disponible en <strong>format 50 ou 100 capsules</strong>. Sélectionnez le format, ajustez la quantité de boîtes, puis ajoutez au panier — vous pouvez combiner plusieurs références dans la même commande.</p>
+
+      <div class="shop-grid" id="shop-grid">
+        <!-- Les fiches produits sont injectées en JS à partir du catalogue PRODUCTS -->
+      </div>
+
+      <p class="shop-note">Une autre référence, un besoin en grand volume ou une machine à grains&nbsp;? <a href="contact.html">Contactez notre équipe</a>.</p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag">Comment ça marche</span>
+          <h2>De votre panier à votre bureau</h2>
+        </div>
+        <p>Un circuit simple, pensé pour les entreprises déjà équipées d'une machine Lavazza FIRMA.</p>
+      </div>
+      <div class="process">
+        <div class="process-step">
+          <span class="num">01</span>
+          <h3>Composez votre commande</h3>
+          <p>Choisissez vos références, formats et quantités dans la boutique, puis ajoutez-les au panier.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">02</span>
+          <h3>Envoyez votre demande</h3>
+          <p>Renseignez vos coordonnées et votre adresse de livraison dans le formulaire de commande.</p>
+        </div>
+        <div class="process-step">
+          <span class="num">03</span>
+          <h3>Confirmation &amp; livraison</h3>
+          <p>Notre équipe confirme votre commande sous 48h ouvrées et organise la livraison à votre bureau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="no-top-pad" id="commande" style="padding-bottom:88px;">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="tag">Étape finale</span>
+          <h2>Finaliser votre commande</h2>
+        </div>
+        <p>Vérifiez votre panier et transmettez votre demande. Réponse et confirmation sous 48h ouvrées.</p>
+      </div>
+
+      <div class="order-grid">
+        <div class="order-recap-card">
+          <h3>Récapitulatif</h3>
+          <div id="order-recap-list">
+            <p class="order-recap-empty">Votre panier est vide pour le moment.</p>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 class="form-card-title">Envoyer ma demande de commande</h3>
+          <p class="form-card-sub">Commande transmise directement à D.A.T., sans paiement en ligne. Nous vous recontactons pour confirmer et organiser la livraison.</p>
+
+          <form id="order-form">
+            <input type="hidden" name="access_key" value="38c4d02f-9430-4d96-a827-ebd07b81f8ea">
+            <input type="hidden" name="subject" value="Nouvelle commande de capsules Lavazza FIRMA — site D.A.T.">
+            <input type="hidden" name="from_name" value="Boutique D.A.T.">
+            <input type="hidden" name="recapitulatif_commande" id="order-recap-field" value="">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-row">
+              <div class="field">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" name="nom" required>
+              </div>
+              <div class="field">
+                <label for="societe">Société</label>
+                <input type="text" id="societe" name="societe" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="field">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone">
+              </div>
+            </div>
+            <div class="field full">
+              <label for="adresse">Adresse de livraison</label>
+              <input type="text" id="adresse" name="adresse" placeholder="N°, rue, code postal, ville" required>
+            </div>
+            <div class="field full">
+              <label for="message">Message ou instructions complémentaires</label>
+              <textarea id="message" name="message" placeholder="Précisions sur la livraison, référence de machine, etc. (facultatif)"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-block" id="order-submit">Envoyer ma commande</button>
+            <p class="form-note" id="order-status">Votre panier sera joint automatiquement à votre demande.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Pas encore équipé d'une machine Lavazza FIRMA&nbsp;?</h2>
+      <a href="capsules-lavazza.html" class="btn btn-outline-navy">Découvrir la machine</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-logo">D.A.T.</p>
+      <p class="footer-tagline">Distribution Automatique Toulousaine — café, snacking et fontaines à eau en entreprise.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="distributeurs-automatiques.html">Distributeurs Automatiques</a></li>
+        <li><a href="capsules-lavazza.html">Machines à capsules LAVAZZA</a></li>
+        <li><a href="grains-lavazza.html">Machine à Grains LAVAZZA</a></li>
+        <li><a href="fontaines-eau.html">Fontaines à Eau</a></li>
+        <li><a href="contact.html">Contact</a></li>
+              <li><a href="mon-compte.html">Mon compte</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nos machines</h4>
+      <ul class="footer-links">
+        <li><a href="distributeurs-automatiques.html">Distributeurs Automatiques</a></li>
+        <li><a href="capsules-lavazza.html">Machines à capsules LAVAZZA</a></li>
+        <li><a href="index.html">Boutique capsules</a></li>
+        <li><a href="grains-lavazza.html">Machine à Grains LAVAZZA</a></li>
+        <li><a href="fontaines-eau.html">Fontaines à Eau</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li>Toulouse</li>
+        <li><a href="tel:+33534480059">05 34 48 00 59</a></li>
+        <li><a href="contact.html">Demander un devis</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 D.A.T. — Distribution Automatique Toulousaine</span>
+    <span class="footer-legal-links"><a href="mentions-legales.html">Mentions légales</a><span>·</span><a href="politique-de-confidentialite.html">Politique de confidentialité</a></span>
+    <span>Toulouse, France</span>
+  </div>
+</footer>
+
+<script src="catalogue.js"></script>
+<script src="shop.js"></script>
+<script src="supabase-config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+<script>
+(function(){
+  /* ---------- Boutique : rendu produits, panier, commande ---------- */
+  window.DAT_SHOP.renderProducts('shop-grid', window.DAT_CATALOGUE.capsules);
+  window.DAT_SHOP.mountCart({
+    badge: 'cart-badge',
+    items: 'cart-items',
+    checkoutBtn: 'cart-checkout-btn',
+    recapList: 'order-recap-list',
+    recapField: 'order-recap-field',
+    toggle: 'cart-toggle',
+    panel: 'cart-panel'
+  });
+  window.DAT_SHOP.mountOrderForm({
+    formId: 'order-form',
+    statusId: 'order-status',
+    submitId: 'order-submit'
+  });
+
+  /* ==========================================================================
+     Nav mobile + recherche (identique aux autres pages du site)
+     ========================================================================== */
+  var SITE_INDEX = [
+    {title:'Mon compte', url:'mon-compte.html', snippet:'Connexion, cr\u00e9ation de compte et historique de vos commandes.', text:'mon compte connexion inscription historique commandes profil'},
+    {title:'Capsules Caf\u00e9', url:'capsules-cafe.html', snippet:'Commandez vos bo\u00eetes de capsules caf\u00e9 Lavazza FIRMA : Milano, Napoli, Roma, Torino.', text:'capsules cafe boutique lavazza firma milano napoli roma torino lungo panier commander'},
+    {title:'Boissons Gourmandes', url:'boissons-gourmandes.html', snippet:'Cappuccino, chocolat chaud, latte macchiato, th\u00e9.', text:'boissons gourmandes cappuccino chocolat chaud latte macchiato the panier commander'},
+    {title:'Accessoire', url:'accessoires.html', snippet:'Kit de d\u00e9tartrage, filtre \u00e0 eau, tasses, support \u00e0 capsules.', text:'accessoires accessoire kit detartrage filtre a eau tasses support capsules entretien'},
+    {title:'Distributeurs Automatiques', url:'distributeurs-automatiques.html', snippet:'Distributeur de caf\u00e9 en grains et snacking, friandises et en-cas.', text:'distributeurs automatiques caf\u00e9 grains snack friandises en-cas sal\u00e9 sucr\u00e9 distributeur automatique'},
+    {title:'Machines \u00e0 capsules LAVAZZA', url:'capsules-lavazza.html', snippet:'Machine \u00e0 capsules premium, format compact.', text:'lavazza firma capsules machine accueil petite structure'},
+    {title:'Machine \u00e0 Grains LAVAZZA', url:'grains-lavazza.html', snippet:'Machine OCS grand volume, grains LAVAZZA.', text:'machine grains lavazza ocs grand volume collectivit\u00e9 administration'},
+    {title:'Fontaines \u00e0 Eau', url:'fontaines-eau.html', snippet:'Fontaine sur r\u00e9seau ou \u00e0 bonbonnes.', text:'fontaine eau r\u00e9seau bonbonne fra\u00eeche bureau'},
+    {title:'Contact', url:'contact.html', snippet:'Adresse, t\u00e9l\u00e9phone et formulaire de devis.', text:'contact devis t\u00e9l\u00e9phone adresse seysses horaires formulaire'},
+    {title:'Mentions l\u00e9gales', url:'mentions-legales.html', snippet:'\u00c9diteur, h\u00e9bergement et propri\u00e9t\u00e9 intellectuelle du site.', text:'mentions l\u00e9gales \u00e9diteur h\u00e9bergement siret ionos'},
+    {title:'Politique de confidentialit\u00e9', url:'politique-de-confidentialite.html', snippet:'Donn\u00e9es collect\u00e9es, finalit\u00e9s et vos droits RGPD.', text:'politique confidentialit\u00e9 rgpd donn\u00e9es personnelles cookies cnil'}
+  ];
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+
+  function runSearch(q){
+    var needle = q.toLowerCase();
+    return SITE_INDEX.filter(function(item){
+      return item.title.toLowerCase().indexOf(needle) !== -1 || item.text.indexOf(needle) !== -1;
+    });
+  }
+
+  var navToggle = document.getElementById('nav-toggle');
+  var siteNav = document.getElementById('site-nav');
+  navToggle.addEventListener('click', function(){
+    var open = siteNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  var toggle = document.getElementById('search-toggle');
+  var searchPanel = document.getElementById('search-panel');
+  var form = document.getElementById('search-form');
+  var results = document.getElementById('search-results');
+  toggle.addEventListener('click', function(){
+    var open = searchPanel.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    var cartPanel = document.getElementById('cart-panel');
+    if(cartPanel) cartPanel.classList.remove('open');
+    if(open) document.getElementById('search-input').focus();
+  });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var q = document.getElementById('search-input').value.trim();
+    if(!q){ results.innerHTML=''; return; }
+    var found = runSearch(q);
+    if(found.length === 0){
+      results.innerHTML = '<p class="search-empty">Aucun r\u00e9sultat pour \u00ab\u00a0' + escapeHtml(q) + '\u00a0\u00bb. <a href="contact.html">Contactez-nous</a> pour toute question.</p>';
+    } else {
+      results.innerHTML = found.map(function(r){
+        return '<a class="search-result" href="' + r.url + '"><span class="sr-title">' + r.title + '</span><span class="sr-snippet">' + r.snippet + '</span></a>';
+      }).join('');
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(!searchPanel.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)){
+      searchPanel.classList.remove('open');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
+</body>
+</html>
