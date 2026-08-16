@@ -62,28 +62,28 @@ window.DAT_CATALOGUE = {
       kicker:'Café & lait en poudre',
       name:'Cappuccino',
       desc:'Un café onctueux à la mousse de lait généreuse, prêt en une capsule pour une pause gourmande.',
-      formats:[ {label:'Boîte de 48 capsules'} ]
+      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     },
     {
       id:'chocolat-chaud',
       kicker:'Boisson chocolatée',
       name:'Chocolat Chaud',
       desc:'Une boisson chocolatée onctueuse et réconfortante, pour varier les plaisirs à la machine.',
-      formats:[ {label:'Boîte de 48 capsules'} ]
+      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     },
     {
       id:'latte-macchiato',
       kicker:'Café & lait',
       name:'Latte Macchiato',
       desc:'Un café tout en douceur, avec une belle couche de mousse de lait, pour une pause gourmande en milieu de journée.',
-      formats:[ {label:'Boîte de 48 capsules'} ]
+      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     },
     {
       id:'the-earl-grey',
       kicker:'Infusion',
       name:'Thé Earl Grey',
       desc:'Une infusion parfumée à la bergamote, pour varier les plaisirs entre deux cafés.',
-      formats:[ {label:'Boîte de 48 capsules'} ]
+      formats:[ {label:'Boîte de 50 capsules'}, {label:'Boîte de 100 capsules'} ]
     }
   ],
 
