@@ -329,6 +329,14 @@ section{ padding:64px 0; }
 <main>
 
 
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="breadcrumb">Mon compte</p>
+      <h1 id="page-title">Mon compte</h1>
+      <p id="page-subtitle">Connectez-vous ou créez un compte pour retrouver vos informations de livraison et suivre vos commandes de capsules Lavazza FIRMA.</p>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
 
@@ -637,6 +645,8 @@ section{ padding:64px 0; }
 
     authView.style.display = 'none';
     dashboardView.style.display = 'block';
+    document.getElementById('page-title').textContent = 'Mon compte';
+    document.getElementById('page-subtitle').textContent = 'Gérez vos informations et retrouvez l\u2019historique de vos commandes.';
     var profile = await window.DAT_AUTH.getProfile(session.user.id);
     document.getElementById('dash-greeting').textContent = 'Bonjour' + (profile && profile.nom ? ' ' + profile.nom.split(' ')[0] : '');
     document.getElementById('profile-email').value = session.user.email || '';
