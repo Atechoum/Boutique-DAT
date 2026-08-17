@@ -99,7 +99,7 @@ window.DAT_CATALOGUE = {
       kicker:'Consommable machine',
       name:'Agitateurs',
       desc:'Agitateurs en bois pour mélanger café, thé et boissons chocolatées, compatibles avec tous les distributeurs.',
-      formats:[ {label:'Boîte de 1000'} ]
+      formats:[ {label:'Sachet de 50'} ]
     },
     {
       id:'sucre-buchettes',
@@ -110,16 +110,16 @@ window.DAT_CATALOGUE = {
     },
     {
       id:'gobelets-10cl',
-      kicker:'Gobelets LAVAZZA',
-      name:'Gobelets LAVAZZA 10 cl',
-      desc:'Gobelets siglés Lavazza, format espresso, adaptés aux distributeurs et machines à capsules.',
-      formats:[ {label:'Manchon de 100 gobelets'} ]
+      kicker:'Gobelets',
+      name:'Gobelets 10 cl',
+      desc:'Gobelets format espresso, adaptés aux distributeurs et machines à capsules.',
+      formats:[ {label:'Bande de 50 gobelets'} ]
     },
     {
       id:'gobelets-16cl',
-      kicker:'Gobelets LAVAZZA',
-      name:'Gobelets LAVAZZA 16 cl',
-      desc:'Gobelets siglés Lavazza, format café allongé ou cappuccino, adaptés aux distributeurs et machines à capsules.',
+      kicker:'Gobelets',
+      name:'Gobelets 16 cl',
+      desc:'Gobelets format café allongé ou cappuccino, adaptés aux distributeurs et machines à capsules.',
       formats:[ {label:'Manchon de 100 gobelets'} ]
     }
   ]
