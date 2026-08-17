@@ -95,32 +95,32 @@ window.DAT_CATALOGUE = {
   /* ---------- Accessoires ---------- */
   accessoires: [
     {
-      id:'kit-detartrage',
-      kicker:'Entretien machine',
-      name:'Kit de détartrage',
-      desc:'Kit de détartrage recommandé tous les 3 mois pour préserver les performances et la durée de vie de votre machine Lavazza FIRMA.',
-      formats:[ {label:'Unité'} ]
+      id:'agitateurs',
+      kicker:'Consommable machine',
+      name:'Agitateurs',
+      desc:'Agitateurs en bois pour mélanger café, thé et boissons chocolatées, compatibles avec tous les distributeurs.',
+      formats:[ {label:'Boîte de 1000'} ]
     },
     {
-      id:'filtre-eau',
-      kicker:'Entretien machine',
-      name:'Filtre à eau machine',
-      desc:'Filtre à eau compatible, à remplacer tous les 2 mois pour préserver le goût de vos cafés et la longévité de la machine.',
-      formats:[ {label:'Unité'} ]
+      id:'sucre-buchettes',
+      kicker:'Consommable machine',
+      name:'Sucre Bûchettes x 200',
+      desc:'Bûchettes de sucre individuelles, pratiques et hygiéniques, pour accompagner vos boissons chaudes.',
+      formats:[ {label:'Boîte de 200 bûchettes'} ]
     },
     {
-      id:'tasses-espresso',
-      kicker:'Accessoire',
-      name:'Tasses espresso LAVAZZA FIRMA',
-      desc:'Lot de 6 tasses à espresso siglées Lavazza FIRMA, pour un service soigné en salle de pause.',
-      formats:[ {label:'Lot de 6 tasses'} ]
+      id:'gobelets-10cl',
+      kicker:'Gobelets LAVAZZA',
+      name:'Gobelets LAVAZZA 10 cl',
+      desc:'Gobelets siglés Lavazza, format espresso, adaptés aux distributeurs et machines à capsules.',
+      formats:[ {label:'Manchon de 100 gobelets'} ]
     },
     {
-      id:'support-capsules',
-      kicker:'Rangement',
-      name:'Support à capsules',
-      desc:'Support de rangement pour 33 capsules, pratique et compact, à poser à côté de votre machine.',
-      formats:[ {label:'Unité'} ]
+      id:'gobelets-16cl',
+      kicker:'Gobelets LAVAZZA',
+      name:'Gobelets LAVAZZA 16 cl',
+      desc:'Gobelets siglés Lavazza, format café allongé ou cappuccino, adaptés aux distributeurs et machines à capsules.',
+      formats:[ {label:'Manchon de 100 gobelets'} ]
     }
   ]
 };
