@@ -96,31 +96,35 @@ window.DAT_CATALOGUE = {
   accessoires: [
     {
       id:'agitateurs',
+      image:'images/accessoire-agitateurs.jpg',
       kicker:'Consommable machine',
       name:'Agitateurs',
       desc:'Agitateurs en bois pour mélanger café, thé et boissons chocolatées, compatibles avec tous les distributeurs.',
       formats:[ {label:'Sachet de 50'} ]
     },
     {
-      id:'sucre-buchettes',
-      kicker:'Consommable machine',
-      name:'Sucre Bûchettes x 200',
-      desc:'Bûchettes de sucre individuelles, pratiques et hygiéniques, pour accompagner vos boissons chaudes.',
-      formats:[ {label:'Boîte de 200 bûchettes'} ]
+      id:'gobelets-16cl',
+      image:'images/accessoire-gobelets-16cl.jpg',
+      kicker:'Gobelets',
+      name:'Gobelets 16 cl',
+      desc:'Gobelets format café allongé ou cappuccino, adaptés aux distributeurs et machines à capsules.',
+      formats:[ {label:'Manchon de 100 gobelets'} ]
     },
     {
       id:'gobelets-10cl',
+      image:'images/accessoire-gobelets-10cl.jpg',
       kicker:'Gobelets',
       name:'Gobelets 10 cl',
       desc:'Gobelets format espresso, adaptés aux distributeurs et machines à capsules.',
       formats:[ {label:'Bande de 50 gobelets'} ]
     },
     {
-      id:'gobelets-16cl',
-      kicker:'Gobelets',
-      name:'Gobelets 16 cl',
-      desc:'Gobelets format café allongé ou cappuccino, adaptés aux distributeurs et machines à capsules.',
-      formats:[ {label:'Manchon de 100 gobelets'} ]
+      id:'sucre-buchettes',
+      image:'images/accessoire-sucre-buchettes.jpg',
+      kicker:'Consommable machine',
+      name:'Sucre Bûchettes x 200',
+      desc:'Bûchettes de sucre individuelles, pratiques et hygiéniques, pour accompagner vos boissons chaudes.',
+      formats:[ {label:'Boîte de 200 bûchettes'} ]
     }
   ]
 };
