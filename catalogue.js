@@ -100,7 +100,7 @@ window.DAT_CATALOGUE = {
       kicker:'Consommable machine',
       name:'Agitateurs',
       desc:'Agitateurs en bois pour mélanger café, thé et boissons chocolatées, compatibles avec tous les distributeurs.',
-      formats:[ {label:'Sachet de 50'} ]
+      formats:[ {label:'Sachets de 50 agitateurs'} ]
     },
     {
       id:'gobelets-16cl',
