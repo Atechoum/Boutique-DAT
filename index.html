@@ -387,6 +387,22 @@ section{ padding:88px 0; }
   border:2px solid rgba(255,255,255,.7); cursor:pointer; padding:0; transition:background .2s ease;
 }
 .hero-dot.active{ background:#fff; }
+.hero-arrow{
+  position:absolute; top:50%; transform:translateY(-50%); z-index:5;
+  width:44px; height:44px; border-radius:50%; border:none; cursor:pointer;
+  background:rgba(10,38,71,.45); color:#fff; display:flex; align-items:center; justify-content:center;
+  transition:background .15s ease;
+}
+.hero-arrow:hover{ background:rgba(10,38,71,.75); }
+.hero-arrow svg{ width:22px; height:22px; }
+.hero-arrow-prev{ left:16px; }
+.hero-arrow-next{ right:16px; }
+@media (max-width:640px){
+  .hero-arrow{ width:36px; height:36px; }
+  .hero-arrow svg{ width:18px; height:18px; }
+  .hero-arrow-prev{ left:10px; }
+  .hero-arrow-next{ right:10px; }
+}
 .home-hero-text{
   background:var(--navy-900); color:#fff; padding:48px 0 44px;
 }
@@ -519,6 +535,12 @@ section{ padding:88px 0; }
   <div class="home-hero-image" id="hero-slider">
     <img src="images/page-garde-hero.jpg" alt="D.A.T. — La Boutique Officiel D.A.T." class="hero-slide active">
     <img src="images/page-garde-hero-2.jpg" alt="D.A.T. — La Boutique Officielle de D.A.T." class="hero-slide">
+    <button type="button" class="hero-arrow hero-arrow-prev" id="hero-prev" aria-label="Image précédente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button type="button" class="hero-arrow hero-arrow-next" id="hero-next" aria-label="Image suivante">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
     <div class="hero-dots">
       <button type="button" class="hero-dot active" data-index="0" aria-label="Image 1"></button>
       <button type="button" class="hero-dot" data-index="1" aria-label="Image 2"></button>
@@ -652,6 +674,10 @@ section{ padding:88px 0; }
       showSlide((current + 1) % slides.length);
     }
 
+    function prevSlide(){
+      showSlide((current - 1 + slides.length) % slides.length);
+    }
+
     function startAutoplay(){
       heroTimer = setInterval(nextSlide, 5500);
     }
@@ -664,6 +690,22 @@ section{ padding:88px 0; }
           startAutoplay();
         });
       });
+      var heroPrev = document.getElementById('hero-prev');
+      var heroNext = document.getElementById('hero-next');
+      if(heroPrev){
+        heroPrev.addEventListener('click', function(){
+          clearInterval(heroTimer);
+          prevSlide();
+          startAutoplay();
+        });
+      }
+      if(heroNext){
+        heroNext.addEventListener('click', function(){
+          clearInterval(heroTimer);
+          nextSlide();
+          startAutoplay();
+        });
+      }
       startAutoplay();
     }
   }
